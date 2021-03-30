@@ -12,10 +12,26 @@
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>com.ssreagents.web.RegistServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VitusServlet</servlet-name>
+        <servlet-class>com.ssreagents.web.VitusServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.ssreagents.web.LoginServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VitusServlet</servlet-name>
+        <url-pattern>/vitus</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
     </servlet-mapping>
 
 </web-app>

@@ -1,0 +1,22 @@
+package com.ssreagents.dao.impl;
+
+import com.ssreagents.dao.VitusDao;
+import com.ssreagents.pojo.Vitus;
+
+public class VitusDaoImpl extends BaseDao implements VitusDao {
+    @Override
+    public int saveVitus(Vitus vitus) {
+        String sql = "insert into t_vitus(username,brand,product_name,goods_num,batch_num,specifications,price" +
+                "goods_time,period_validity,seroytpe,promoter,element,fluorescent,genetic_code,gene_name,gene_size" +
+                "resistance_gene,storage,qpcr,silver_stain,literature_used,application,application_object_atrain" +
+                "bio_organization,application_way,volume,infection_time,is_achieve_goal,cost_performance,overall_evaluation" +
+                "comments ,drawings_show,URL,img)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        return upadate(sql,vitus.getUsername(),vitus.getBrand(),vitus.getProduct_name(),vitus.getGoods_num(),vitus.getBatch_num(),
+                vitus.getSpecifications(),vitus.getPrice(),vitus.getGoods_time(),vitus.getPeriod_validity(),vitus.getSeroytpe(),vitus.getPromoter(),
+                vitus.getElement(),vitus.getFluorescent(),vitus.getGenetic_code(),vitus.getGene_name(),vitus.getGene_size(),
+                vitus.getResistance_gene(),vitus.getStorage(),vitus.getQpcr(),vitus.getSilver_stain(),vitus.getLiterature_used(),
+                vitus.getApplication(),vitus.getApplication_object_atrain(),vitus.getBio_organization(),vitus.getApplication_way(),vitus.getVolume(),
+                vitus.getInfection_time(),vitus.getIs_achieve_goal(),vitus.getCost_performance(),vitus.getOverall_evaluation(),vitus.getComments(),
+                vitus.getDrawings_show(),vitus.getURL(),vitus.getImg());
+    }
+}
