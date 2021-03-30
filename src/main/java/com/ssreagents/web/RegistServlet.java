@@ -21,13 +21,15 @@ public class RegistServlet extends HttpServlet {
         String email = req.getParameter("email");
 
 
-        System.out.println("============================");
+        System.out.println("============================0");
         if (us.existsUsername(username)) {
             System.out.println("用户名【" + username + "】已存在");
-            req.getRequestDispatcher("/ssreagents_war_exploded/pages/user/regist.jsp").forward(req, resp);
+            req.getRequestDispatcher("/pages/user/regist.jsp").forward(req, resp);
+            System.out.println("============================1");
         } else {
             us.registUser(new User(null, username, password, email));
-            req.getRequestDispatcher("/ssreagents_war_exploded/pages/user/regist_success.html");
+            req.getRequestDispatcher("/pages/user/regist_success.html").forward(req, resp);
+            System.out.println("============================2");
         }
 
 
