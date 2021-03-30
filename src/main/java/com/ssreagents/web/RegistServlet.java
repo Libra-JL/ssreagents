@@ -24,7 +24,7 @@ public class RegistServlet extends HttpServlet {
         System.out.println("============================");
         if (us.existsUsername(username)) {
             System.out.println("用户名【" + username + "】已存在");
-            req.getRequestDispatcher("/ssreagents_war_exploded/pages/user/regist.html").forward(req, resp);
+            req.getRequestDispatcher("/ssreagents_war_exploded/pages/user/regist.jsp").forward(req, resp);
         } else {
             us.registUser(new User(null, username, password, email));
             req.getRequestDispatcher("/ssreagents_war_exploded/pages/user/regist_success.html");
