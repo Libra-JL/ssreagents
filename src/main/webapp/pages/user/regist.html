@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>试剂数据录入注册页面</title>
-		<link type="text/css" rel="stylesheet" href="../../static/css/style.css" >
-		<script type="text/javascript" src="../../static/script/jquery-1.7.2.js"></script>
+		<link type="text/css" rel="stylesheet" href="/ssreagents_war_exploded/static/css/style.css" >
+		<script type="text/javascript" src="/ssreagents_war_exploded/static/script/jquery-1.7.2.js"></script>
 		<script type="text/javascript">
 			// 页面加载完成之后
 			$(function () {
@@ -78,7 +78,7 @@
 	</head>
 	<body>
 		<div id="login_header">
-			<img class="logo_img" alt=""  width="258" height="82"  src="../../static/img/logo.gif" >
+			<img class="logo_img" alt=""  width="258" height="82"  src="/ssreagents_war_exploded/static/img/logo.gif" >
 		</div>
 
 			<div class="login_banner">
@@ -95,7 +95,7 @@
 								<span class="errorMsg"></span>
 							</div>
 							<div class="form">
-								<form action="http://localhost:8080">
+								<form action="/register"  method="post">
 									<label>用户名称：</label>
 									<input class="itxt" type="text" placeholder="用户名(字母数字下划线5-12位)"
 										   autocomplete="off" tabindex="1" name="username" id="username" />
