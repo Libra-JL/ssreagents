@@ -2,11 +2,18 @@ package com.ssreagents.dao;
 
 import com.ssreagents.pojo.User;
 
+/**
+ * @author Libra
+ */
 public interface UserDao {
-
-    public User queryUserbyUserName(String username);
+    /**
+     *
+     * @param email
+     * @return
+     */
+    public User queryUserbyEmail(String email);
 
     public int saveUser(User user);
 
-    public User queryUserbyUserNameAndPassword(String username,String password);
+    public User queryUserbyEmailAndPassword(String username,String password);
 }

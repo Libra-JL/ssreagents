@@ -1,137 +1,157 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>è¯•å‰‚æ•°æ®å½•å…¥æ³¨å†Œé¡µé¢</title>
-		<base href="http://localhost:8080/ssreagents_war_exploded/">
-		<link type="text/css" rel="stylesheet" href="/ssreagents_war_exploded/static/css/style.css" >
-		<script type="text/javascript" src="/ssreagents_war_exploded/static/script/jquery-1.7.2.js"></script>
-		<script type="text/javascript">
-			// é¡µé¢åŠ è½½å®Œæˆä¹‹å
-			$(function () {
-				// ç»™æ³¨å†Œç»‘å®šå•å‡»äº‹ä»¶
-				$("#sub_btn").click(function () {
-					// éªŒè¯ç”¨æˆ·åï¼šå¿…é¡»ç”±å­—æ¯ï¼Œæ•°å­—ä¸‹åˆ’çº¿ç»„æˆï¼Œå¹¶ä¸”é•¿åº¦ä¸º5åˆ°12ä½
-					//1 è·å–ç”¨æˆ·åè¾“å…¥æ¡†é‡Œçš„å†…å®¹
-					var usernameText = $("#username").val();
-					//2 åˆ›å»ºæ­£åˆ™è¡¨è¾¾å¼å¯¹è±¡
-					var usernamePatt = /^\w{5,12}$/;
-					//3 ä½¿ç”¨testæ–¹æ³•éªŒè¯
-					if (!usernamePatt.test(usernameText)) {
-						//4 æç¤ºç”¨æˆ·ç»“æœ
-						$("span.errorMsg").text("ç”¨æˆ·åä¸åˆæ³•ï¼");
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="GBK">
+    <title>ÊÔ¼ÁÊı¾İÂ¼Èë×¢²áÒ³Ãæ</title>
+    <base href="http://localhost:8080/ssreagents/">
+    <link type="text/css" rel="stylesheet" href="static/css/style.css">
+    <script type="text/javascript" src="static/script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        // Ò³Ãæ¼ÓÔØÍê³ÉÖ®ºó
+        $(function () {
+            // ¸ø×¢²á°ó¶¨µ¥»÷ÊÂ¼ş
+            $("#sub_btn").click(function () {
+                // ÑéÖ¤ÓÃ»§Ãû£º±ØĞëÓÉ×ÖÄ¸£¬Êı×ÖÏÂ»®Ïß×é³É£¬²¢ÇÒ³¤¶ÈÎª5µ½12Î»
+                //1 »ñÈ¡ÓÃ»§ÃûÊäÈë¿òÀïµÄÄÚÈİ
+                var usernameText = $("#username").val();
+                //2 ´´½¨ÕıÔò±í´ïÊ½¶ÔÏó
+                var usernamePatt = /^\w{5,12}$/;
+                //3 Ê¹ÓÃtest·½·¨ÑéÖ¤
+                if (!usernamePatt.test(usernameText)) {
+                    //4 ÌáÊ¾ÓÃ»§½á¹û
+                    $("span.errorMsg").text("ÓÃ»§Ãû²»ºÏ·¨£¡");
 
-						return false;
-					}
+                    return false;
+                }
 
-					// éªŒè¯å¯†ç ï¼šå¿…é¡»ç”±å­—æ¯ï¼Œæ•°å­—ä¸‹åˆ’çº¿ç»„æˆï¼Œå¹¶ä¸”é•¿åº¦ä¸º5åˆ°12ä½
-					//1 è·å–ç”¨æˆ·åè¾“å…¥æ¡†é‡Œçš„å†…å®¹
-					var passwordText = $("#password").val();
-					//2 åˆ›å»ºæ­£åˆ™è¡¨è¾¾å¼å¯¹è±¡
-					var passwordPatt = /^\w{5,12}$/;
-					//3 ä½¿ç”¨testæ–¹æ³•éªŒè¯
-					if (!passwordPatt.test(passwordText)) {
-						//4 æç¤ºç”¨æˆ·ç»“æœ
-						$("span.errorMsg").text("å¯†ç ä¸åˆæ³•ï¼");
+                // ÑéÖ¤ÃÜÂë£º±ØĞëÓÉ×ÖÄ¸£¬Êı×ÖÏÂ»®Ïß×é³É£¬²¢ÇÒ³¤¶ÈÎª5µ½12Î»
+                //1 »ñÈ¡ÓÃ»§ÃûÊäÈë¿òÀïµÄÄÚÈİ
+                var passwordText = $("#password").val();
+                //2 ´´½¨ÕıÔò±í´ïÊ½¶ÔÏó
+                var passwordPatt = /^\w{5,12}$/;
+                //3 Ê¹ÓÃtest·½·¨ÑéÖ¤
+                if (!passwordPatt.test(passwordText)) {
+                    //4 ÌáÊ¾ÓÃ»§½á¹û
+                    $("span.errorMsg").text("ÃÜÂë²»ºÏ·¨£¡");
 
-						return false;
-					}
+                    return false;
+                }
 
-					// éªŒè¯ç¡®è®¤å¯†ç ï¼šå’Œå¯†ç ç›¸åŒ
-					//1 è·å–ç¡®è®¤å¯†ç å†…å®¹
-					var repwdText = $("#repwd").val();
-					//2 å’Œå¯†ç ç›¸æ¯”è¾ƒ
-					if (repwdText != passwordText) {
-						//3 æç¤ºç”¨æˆ·
-						$("span.errorMsg").text("ç¡®è®¤å¯†ç å’Œå¯†ç ä¸ä¸€è‡´ï¼");
+                // ÑéÖ¤È·ÈÏÃÜÂë£ººÍÃÜÂëÏàÍ¬
+                //1 »ñÈ¡È·ÈÏÃÜÂëÄÚÈİ
+                var repwdText = $("#repwd").val();
+                //2 ºÍÃÜÂëÏà±È½Ï
+                if (repwdText != passwordText) {
+                    //3 ÌáÊ¾ÓÃ»§
+                    $("span.errorMsg").text("È·ÈÏÃÜÂëºÍÃÜÂë²»Ò»ÖÂ£¡");
 
-						return false;
-					}
+                    return false;
+                }
 
-					// é‚®ç®±éªŒè¯ï¼šxxxxx@xxx.com
-					//1 è·å–é‚®ç®±é‡Œçš„å†…å®¹
-					var emailText = $("#email").val();
-					//2 åˆ›å»ºæ­£åˆ™è¡¨è¾¾å¼å¯¹è±¡
-					var emailPatt = /^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$/;
-					//3 ä½¿ç”¨testæ–¹æ³•éªŒè¯æ˜¯å¦åˆæ³•
-					if (!emailPatt.test(emailText)) {
-						//4 æç¤ºç”¨æˆ·
-						$("span.errorMsg").text("é‚®ç®±æ ¼å¼ä¸åˆæ³•ï¼");
+                // ÓÊÏäÑéÖ¤£ºxxxxx@xxx.com
+                //1 »ñÈ¡ÓÊÏäÀïµÄÄÚÈİ
+                var emailText = $("#email").val();
+                //2 ´´½¨ÕıÔò±í´ïÊ½¶ÔÏó
+                var emailPatt = /^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$/;
+                //3 Ê¹ÓÃtest·½·¨ÑéÖ¤ÊÇ·ñºÏ·¨
+                if (!emailPatt.test(emailText)) {
+                    //4 ÌáÊ¾ÓÃ»§
+                    $("span.errorMsg").text("ÓÊÏä¸ñÊ½²»ºÏ·¨£¡");
 
-						return false;
-					}
+                    return false;
+                }
 
-					// å»æ‰é”™è¯¯ä¿¡æ¯
-					$("span.errorMsg").text("");
+                // È¥µô´íÎóĞÅÏ¢
+                $("span.errorMsg").text("");
 
-				});
+            });
 
-			});
+        });
 
-		</script>
-	<style type="text/css">
-		.login_form{
-			height:420px;
-			margin-top: 25px;
-		}
+    </script>
+    <style type="text/css">
+        .login_form {
+            height: 470px;
+            margin-top: 2px;
+        }
 
-	</style>
-	</head>
-	<body>
-		<div id="login_header">
-			<img class="logo_img" alt=""  width="258" height="82"  src="/ssreagents_war_exploded/static/img/logo.gif" >
-		</div>
+    </style>
+</head>
+<body>
+<div id="login_header">
+    <img class="logo_img" alt="" width="258" height="82" src="static/img/logo.gif">
+</div>
 
-			<div class="login_banner">
+<div class="login_banner">
 
-				<div id="l_content">
-					<span class="login_word">æ¬¢è¿æ³¨å†Œ</span>
-				</div>
+    <div id="l_content">
+        <span class="login_word">»¶Ó­×¢²á</span>
+    </div>
 
-				<div id="content">
-					<div class="login_form">
-						<div class="login_box">
-							<div class="tit">
-								<h1>æ³¨å†Œè¯•å‰‚æ•°æ®å½•å…¥</h1>
-								<span class="errorMsg"></span>
-							</div>
-							<div class="form">
-								<form action="/ssreagents_war_exploded/register"  method="post">
-									<label>ç”¨æˆ·åç§°ï¼š</label>
-									<input class="itxt" type="text" placeholder="ç”¨æˆ·å(å­—æ¯æ•°å­—ä¸‹åˆ’çº¿5-12ä½)"
-										   autocomplete="off" tabindex="1" name="username" id="username" />
-									<br />
-									<br />
-									<label>ç”¨æˆ·å¯†ç ï¼š</label>
-									<input class="itxt" type="password" placeholder="å¯†ç (å­—æ¯æ•°å­—ä¸‹åˆ’çº¿5-12ä½)"
-										   autocomplete="off" tabindex="1" name="password" id="password" />
-									<br />
-									<br />
-									<label>ç¡®è®¤å¯†ç ï¼š</label>
-									<input class="itxt" type="password" placeholder="ç¡®è®¤å¯†ç "
-										   autocomplete="off" tabindex="1" name="repwd" id="repwd" />
-									<br />
-									<br />
-									<label>ç”µå­é‚®ä»¶ï¼š</label>
-									<input class="itxt" type="text" placeholder="è¯·è¾“å…¥é‚®ç®±åœ°å€"
-										   autocomplete="off" tabindex="1" name="email" id="email" />
-									<br />
-									<br />
-									<br />
-									<br />
-									<br />
-									<input type="submit" value="æ³¨å†Œ" id="sub_btn" />
-								</form>
-							</div>
+    <div id="content">
+        <div class="login_form">
+            <div class="login_box">
 
-						</div>
-					</div>
-				</div>
-			</div>
-		<div id="bottom">
+                <div class="form">
+                    <form action="register" method="post">
+                        <label>ÓÃ»§Ãû³Æ£º</label>
+                        <input class="itxt" type="text" placeholder="ÓÃ»§Ãû(×ÖÄ¸Êı×ÖÏÂ»®Ïß5-12Î»)"
+                               autocomplete="off" tabindex="1" name="username" id="username"/>
+                        <br/>
+                        <label>ÓÃ»§ÃÜÂë£º</label>
+                        <input class="itxt" type="password" placeholder="ÃÜÂë(×ÖÄ¸Êı×ÖÏÂ»®Ïß5-12Î»)"
+                               autocomplete="off" tabindex="1" name="password" id="password"/>
+                        <br/>
+                        <label>È·ÈÏÃÜÂë£º</label>
+                        <input class="itxt" type="password" placeholder="È·ÈÏÃÜÂë"
+                               autocomplete="off" tabindex="1" name="repwd" id="repwd"/>
+                        <br/>
+                        <label>µç×ÓÓÊ¼ş£º</label>
+                        <input class="itxt" type="text" placeholder="ÇëÊäÈëÓÊÏäµØÖ·"
+                               autocomplete="off" tabindex="1" name="email" id="email"/>
+                        <br/>
+                        <label>ÊÖ»úºÅÂë£º</label>
+                        <input class="itxt" type="text" placeholder="ÇëÊäÈëÓÊÏäµØÖ·"
+                               autocomplete="off" tabindex="1" name="phone_num" id="phone_num"/>
+                        <br/>
+                        <label>Ñ§Ğ£Ãû³Æ£º</label>
+                        <input class="itxt" type="text" placeholder="ÇëÊäÈëÓÊÏäµØÖ·"
+                               autocomplete="off" tabindex="1" name="school" id="school"/>
+                        <br/>
+                        <label>ËùÊôÑ§Ôº£º</label>
+                        <input class="itxt" type="text" placeholder="ÇëÊäÈëÓÊÏäµØÖ·"
+                               autocomplete="off" tabindex="1" name="college" id="college"/>
+                        <br/>
+                        <label>PI¸ºÔğÈË£º</label>
+                        <input class="itxt" type="text" placeholder="ÇëÊäÈëPI¸ºÔğÈËÃû³Æ"
+                               autocomplete="off" tabindex="1" name="pi_name" id="pi_name"/>
+                        <br/>
+                        <label>Ñ§ÉúÃû³Æ£º</label>
+                        <input class="itxt" type="text" placeholder="ÇëÊäÈëÑ§ÉúÃû³Æ"
+                               autocomplete="off" tabindex="1" name="student_name" id="student_name"/>
+                        <br/>
+                        <br/>
+                        <label>Éí·İÑ¡Ôñ£º</label>
+                        <input  type="radio" name="identity" value="0"/>pi
+                        &nbsp;
+                        &nbsp;
+                        <input  type="radio" name="identity" value="1"/>Ñ§Éú
+                        &nbsp;
+                        &nbsp;
+                        <input  type="radio" name="identity" value="2"/>ÆäËû
+                        <br/>
+                        <input type="submit" value="×¢²á" id="sub_btn"/>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="bottom">
 			<span>
-				è¯•å‰‚æ•°æ®å½•å…¥.Copyright &copy;2021
+				ÊÔ¼ÁÊı¾İÂ¼Èë.Copyright &copy;2021
 			</span>
-		</div>
-	</body>
+</div>
+</body>
 </html>

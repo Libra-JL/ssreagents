@@ -17,12 +17,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User login(User user) {
-        return userDao.queryUserbyUserNameAndPassword(user.getUsername(), user.getPassword());
+        return userDao.queryUserbyEmailAndPassword(user.getEmail(), user.getPassword());
     }
 
     @Override
-    public boolean existsUsername(String username) {
-        if (userDao.queryUserbyUserName(username) == null) {
+    public boolean existsEmail(String email) {
+        if (userDao.queryUserbyEmail(email) == null) {
 
             return false;
         }

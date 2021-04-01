@@ -19,17 +19,23 @@ public class RegistServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         String email = req.getParameter("email");
+        String phone_num = req.getParameter("phone_num");
+        String school = req.getParameter("school");
+        String college = req.getParameter("college");
+        String identity = req.getParameter("identity");
+        String pi_name = req.getParameter("pi_name");
+        String student_name = req.getParameter("student_name");
 
 
-        System.out.println("============================0");
-        if (us.existsUsername(username)) {
-            System.out.println("用户名【" + username + "】已存在");
+
+        if (us.existsEmail(email)) {
+            System.out.println("用户名【" + email + "】已存在");
             req.getRequestDispatcher("/pages/user/regist.jsp").forward(req, resp);
             System.out.println("============================1");
         } else {
-            us.registUser(new User(null, username, password, email));
+            us.registUser(new User(null, username, password, email,phone_num,school,college,identity,pi_name,student_name));
             req.getRequestDispatcher("/pages/user/regist_success.html").forward(req, resp);
-            System.out.println("============================2");
+
         }
 
 

@@ -10,8 +10,8 @@ public interface UserService {
 
     /**
      * 检查用户名是否可用
-     * @param username
+     * @param email
      * @return 返回true表示用户名存在
      */
-    public boolean existsUsername(String username);
+    public boolean existsEmail(String email);
 }

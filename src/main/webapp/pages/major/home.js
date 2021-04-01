@@ -1,12 +1,12 @@
 
 //菜单数组
 const menuArray = [
-    { id: 1, url: './page1.html', name: '菜单一' },
-    { id: 2, url: './page2.html', name: '菜单二' },
-    { id: 3, url: './page3.html', name: '菜单三' },
-    { id: 4, url: './page4.html', name: '菜单四' },
-    { id: 5, url: './page5.html', name: '菜单五' },
-    { id: 6, url: './page6.html', name: '菜单六' },
+    { id: 1, url: 'virus.html', name: '病毒' },
+    { id: 2, url: 'antibody.html', name: '抗体' },
+    { id: 3, url: 'Proteins_peptides.html', name: '蛋白与多肽' },
+    { id: 4, url: 'plasmid.html', name: '质粒' },
+    { id: 5, url: 'kit.html', name: '试剂盒' },
+    { id: 6, url: 'chemicalandother.html', name: '化学品与其他' },
 ];
 //储存切换的tab菜单
 var tabmune = [];
