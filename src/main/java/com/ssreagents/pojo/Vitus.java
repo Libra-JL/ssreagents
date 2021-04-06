@@ -1,10 +1,14 @@
 package com.ssreagents.pojo;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Vitus {
+
+    //basic
     private Integer id;
-    private String username;
+    private String uid;
+
     private String brand;
     private String product_name;
     private String goods_num;
@@ -25,6 +29,7 @@ public class Vitus {
     private String qpcr;
     private String silver_stain;
     private String literature_used;
+    //extend
     private String application;
     private String application_object_atrain;
     private String bio_organization;
@@ -39,50 +44,107 @@ public class Vitus {
     private String URL;
     private String img;
 
+    private LocalDateTime createdate;
+    private String recorderemail;
 
-//    public Vitus() {
-//    }
-
-    public Vitus(Integer id, String username, String brand, String product_name, String goods_num, String batch_num, String specifications, String price, String goods_time, String period_validity, String seroytpe, String promoter, String element, String fluorescent, String genetic_code, String gene_name, String gene_size, String resistance_gene, String storage, String qpcr, String silver_stain, String literature_used, String application, String application_object_atrain, String bio_organization, String application_way, String volume, String infection_time, String is_achieve_goal, String cost_performance, String overall_evaluation, String comments, String drawings_show, String URL, String img) {
-
-        this.id = id;
-        this.username = username;
-        this.brand = brand;
-        this.product_name = product_name;
-        this.goods_num = goods_num;
-        this.batch_num = batch_num;
-        this.specifications = specifications;
-        this.price = price;
-        this.goods_time = goods_time;
-        this.period_validity = period_validity;
-        this.seroytpe = seroytpe;
-        this.promoter = promoter;
-        this.element = element;
-        this.fluorescent = fluorescent;
-        this.genetic_code = genetic_code;
-        this.gene_name = gene_name;
-        this.gene_size = gene_size;
-        this.resistance_gene = resistance_gene;
-        this.storage = storage;
-        this.qpcr = qpcr;
-        this.silver_stain = silver_stain;
-        this.literature_used = literature_used;
-        this.application = application;
-        this.application_object_atrain = application_object_atrain;
-        this.bio_organization = bio_organization;
-        this.application_way = application_way;
-        this.volume = volume;
-        this.infection_time = infection_time;
-        this.is_achieve_goal = is_achieve_goal;
-        this.cost_performance = cost_performance;
-        this.overall_evaluation = overall_evaluation;
-        this.comments = comments;
-        this.drawings_show = drawings_show;
-        this.URL = URL;
-        this.img = img;
+    public Vitus(String brand, String product_name, String goods_num, String batch_num, String specifications, String price, String goods_time, String period_validity, String seroytpe, String promoter, String element, String fluorescent, String genetic_code, String gene_name, String gene_size, String resistance_gene, String storage, String qpcr, String silver_stain, String literature_used, String application, String application_object_atrain, String bio_organization, String application_way, String volume, String infection_time, String is_achieve_goal, String cost_performance, String overall_evaluation, String comments, String drawings_show, String url, String img, LocalDateTime createrecordertime, String email) {
     }
 
-    public Vitus(Integer id, String username, String brand, String product_name, String goods_num, String batch_num, String specifications, String price, String goods_time, String period_validity, String seroytpe, String promoter, String element, String fluorescent, String genetic_code, String gene_name, String gene_size, String resistance_gene, String qpcr, String silver_stain, String literature_used, String application, String application_object_atrain, String bio_organization, String application_way, String volume, String infection_time, String is_achieve_goal, String cost_performance, String overall_evaluation, String comments, String drawings_show, String url, String img) {
+
+    @Override
+    public String toString() {
+        return "Vitus{" +
+                "id=" + id +
+                ", uid='" + uid + '\'' +
+                ", brand='" + brand + '\'' +
+                ", product_name='" + product_name + '\'' +
+                ", goods_num='" + goods_num + '\'' +
+                ", batch_num='" + batch_num + '\'' +
+                ", specifications='" + specifications + '\'' +
+                ", price='" + price + '\'' +
+                ", goods_time='" + goods_time + '\'' +
+                ", period_validity='" + period_validity + '\'' +
+                ", seroytpe='" + seroytpe + '\'' +
+                ", promoter='" + promoter + '\'' +
+                ", element='" + element + '\'' +
+                ", fluorescent='" + fluorescent + '\'' +
+                ", genetic_code='" + genetic_code + '\'' +
+                ", gene_name='" + gene_name + '\'' +
+                ", gene_size='" + gene_size + '\'' +
+                ", resistance_gene='" + resistance_gene + '\'' +
+                ", storage='" + storage + '\'' +
+                ", qpcr='" + qpcr + '\'' +
+                ", silver_stain='" + silver_stain + '\'' +
+                ", literature_used='" + literature_used + '\'' +
+                ", application='" + application + '\'' +
+                ", application_object_atrain='" + application_object_atrain + '\'' +
+                ", bio_organization='" + bio_organization + '\'' +
+                ", application_way='" + application_way + '\'' +
+                ", volume='" + volume + '\'' +
+                ", infection_time='" + infection_time + '\'' +
+                ", is_achieve_goal='" + is_achieve_goal + '\'' +
+                ", cost_performance='" + cost_performance + '\'' +
+                ", overall_evaluation='" + overall_evaluation + '\'' +
+                ", comments='" + comments + '\'' +
+                ", drawings_show='" + drawings_show + '\'' +
+                ", URL='" + URL + '\'' +
+                ", img='" + img + '\'' +
+                ", createdate=" + createdate +
+                ", recorderemail='" + recorderemail + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Vitus vitus = (Vitus) o;
+        return Objects.equals(id, vitus.id) &&
+                Objects.equals(uid, vitus.uid) &&
+                Objects.equals(brand, vitus.brand) &&
+                Objects.equals(product_name, vitus.product_name) &&
+                Objects.equals(goods_num, vitus.goods_num) &&
+                Objects.equals(batch_num, vitus.batch_num) &&
+                Objects.equals(specifications, vitus.specifications) &&
+                Objects.equals(price, vitus.price) &&
+                Objects.equals(goods_time, vitus.goods_time) &&
+                Objects.equals(period_validity, vitus.period_validity) &&
+                Objects.equals(seroytpe, vitus.seroytpe) &&
+                Objects.equals(promoter, vitus.promoter) &&
+                Objects.equals(element, vitus.element) &&
+                Objects.equals(fluorescent, vitus.fluorescent) &&
+                Objects.equals(genetic_code, vitus.genetic_code) &&
+                Objects.equals(gene_name, vitus.gene_name) &&
+                Objects.equals(gene_size, vitus.gene_size) &&
+                Objects.equals(resistance_gene, vitus.resistance_gene) &&
+                Objects.equals(storage, vitus.storage) &&
+                Objects.equals(qpcr, vitus.qpcr) &&
+                Objects.equals(silver_stain, vitus.silver_stain) &&
+                Objects.equals(literature_used, vitus.literature_used) &&
+                Objects.equals(application, vitus.application) &&
+                Objects.equals(application_object_atrain, vitus.application_object_atrain) &&
+                Objects.equals(bio_organization, vitus.bio_organization) &&
+                Objects.equals(application_way, vitus.application_way) &&
+                Objects.equals(volume, vitus.volume) &&
+                Objects.equals(infection_time, vitus.infection_time) &&
+                Objects.equals(is_achieve_goal, vitus.is_achieve_goal) &&
+                Objects.equals(cost_performance, vitus.cost_performance) &&
+                Objects.equals(overall_evaluation, vitus.overall_evaluation) &&
+                Objects.equals(comments, vitus.comments) &&
+                Objects.equals(drawings_show, vitus.drawings_show) &&
+                Objects.equals(URL, vitus.URL) &&
+                Objects.equals(img, vitus.img) &&
+                Objects.equals(createdate, vitus.createdate) &&
+                Objects.equals(recorderemail, vitus.recorderemail);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, uid, brand, product_name, goods_num, batch_num, specifications, price, goods_time, period_validity, seroytpe, promoter, element, fluorescent, genetic_code, gene_name, gene_size, resistance_gene, storage, qpcr, silver_stain, literature_used, application, application_object_atrain, bio_organization, application_way, volume, infection_time, is_achieve_goal, cost_performance, overall_evaluation, comments, drawings_show, URL, img, createdate, recorderemail);
     }
 
     public Integer getId() {
@@ -93,12 +155,12 @@ public class Vitus {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUid() {
+        return uid;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getBrand() {
@@ -365,95 +427,63 @@ public class Vitus {
         this.img = img;
     }
 
-    @Override
-    public String toString() {
-        return "Vitus{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", brand='" + brand + '\'' +
-                ", product_name='" + product_name + '\'' +
-                ", goods_num='" + goods_num + '\'' +
-                ", batch_num='" + batch_num + '\'' +
-                ", specifications='" + specifications + '\'' +
-                ", price='" + price + '\'' +
-                ", goods_time='" + goods_time + '\'' +
-                ", period_validity='" + period_validity + '\'' +
-                ", seroytpe='" + seroytpe + '\'' +
-                ", promoter='" + promoter + '\'' +
-                ", element='" + element + '\'' +
-                ", fluorescent='" + fluorescent + '\'' +
-                ", genetic_code='" + genetic_code + '\'' +
-                ", gene_name='" + gene_name + '\'' +
-                ", gene_size='" + gene_size + '\'' +
-                ", resistance_gene='" + resistance_gene + '\'' +
-                ", storage='" + storage + '\'' +
-                ", qpcr='" + qpcr + '\'' +
-                ", silver_stain='" + silver_stain + '\'' +
-                ", literature_used='" + literature_used + '\'' +
-                ", application='" + application + '\'' +
-                ", application_object_atrain='" + application_object_atrain + '\'' +
-                ", bio_organization='" + bio_organization + '\'' +
-                ", application_way='" + application_way + '\'' +
-                ", volume='" + volume + '\'' +
-                ", infection_time='" + infection_time + '\'' +
-                ", is_achieve_goal='" + is_achieve_goal + '\'' +
-                ", cost_performance='" + cost_performance + '\'' +
-                ", overall_evaluation='" + overall_evaluation + '\'' +
-                ", comments='" + comments + '\'' +
-                ", drawings_show='" + drawings_show + '\'' +
-                ", URL='" + URL + '\'' +
-                ", img='" + img + '\'' +
-                '}';
+    public LocalDateTime getCreatedate() {
+        return createdate;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Vitus vitus = (Vitus) o;
-        return Objects.equals(id, vitus.id) &&
-                Objects.equals(username, vitus.username) &&
-                Objects.equals(brand, vitus.brand) &&
-                Objects.equals(product_name, vitus.product_name) &&
-                Objects.equals(goods_num, vitus.goods_num) &&
-                Objects.equals(batch_num, vitus.batch_num) &&
-                Objects.equals(specifications, vitus.specifications) &&
-                Objects.equals(price, vitus.price) &&
-                Objects.equals(goods_time, vitus.goods_time) &&
-                Objects.equals(period_validity, vitus.period_validity) &&
-                Objects.equals(seroytpe, vitus.seroytpe) &&
-                Objects.equals(promoter, vitus.promoter) &&
-                Objects.equals(element, vitus.element) &&
-                Objects.equals(fluorescent, vitus.fluorescent) &&
-                Objects.equals(genetic_code, vitus.genetic_code) &&
-                Objects.equals(gene_name, vitus.gene_name) &&
-                Objects.equals(gene_size, vitus.gene_size) &&
-                Objects.equals(resistance_gene, vitus.resistance_gene) &&
-                Objects.equals(storage, vitus.storage) &&
-                Objects.equals(qpcr, vitus.qpcr) &&
-                Objects.equals(silver_stain, vitus.silver_stain) &&
-                Objects.equals(literature_used, vitus.literature_used) &&
-                Objects.equals(application, vitus.application) &&
-                Objects.equals(application_object_atrain, vitus.application_object_atrain) &&
-                Objects.equals(bio_organization, vitus.bio_organization) &&
-                Objects.equals(application_way, vitus.application_way) &&
-                Objects.equals(volume, vitus.volume) &&
-                Objects.equals(infection_time, vitus.infection_time) &&
-                Objects.equals(is_achieve_goal, vitus.is_achieve_goal) &&
-                Objects.equals(cost_performance, vitus.cost_performance) &&
-                Objects.equals(overall_evaluation, vitus.overall_evaluation) &&
-                Objects.equals(comments, vitus.comments) &&
-                Objects.equals(drawings_show, vitus.drawings_show) &&
-                Objects.equals(URL, vitus.URL) &&
-                Objects.equals(img, vitus.img);
+    public void setCreatedate(LocalDateTime createdate) {
+        this.createdate = createdate;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, username, brand, product_name, goods_num, batch_num, specifications, price, goods_time, period_validity, seroytpe, promoter, element, fluorescent, genetic_code, gene_name, gene_size, resistance_gene, storage, qpcr, silver_stain, literature_used, application, application_object_atrain, bio_organization, application_way, volume, infection_time, is_achieve_goal, cost_performance, overall_evaluation, comments, drawings_show, URL, img);
+    public String getRecorderemail() {
+        return recorderemail;
+    }
+
+    public void setRecorderemail(String recorderemail) {
+        this.recorderemail = recorderemail;
+    }
+
+    public Vitus() {
+    }
+
+    public Vitus(Integer id, String uid, String brand, String product_name, String goods_num, String batch_num, String specifications, String price, String goods_time, String period_validity, String seroytpe, String promoter, String element, String fluorescent, String genetic_code, String gene_name, String gene_size, String resistance_gene, String storage, String qpcr, String silver_stain, String literature_used, String application, String application_object_atrain, String bio_organization, String application_way, String volume, String infection_time, String is_achieve_goal, String cost_performance, String overall_evaluation, String comments, String drawings_show, String URL, String img, LocalDateTime createdate, String recorderemail) {
+
+        this.id = id;
+        this.uid = uid;
+        this.brand = brand;
+        this.product_name = product_name;
+        this.goods_num = goods_num;
+        this.batch_num = batch_num;
+        this.specifications = specifications;
+        this.price = price;
+        this.goods_time = goods_time;
+        this.period_validity = period_validity;
+        this.seroytpe = seroytpe;
+        this.promoter = promoter;
+        this.element = element;
+        this.fluorescent = fluorescent;
+        this.genetic_code = genetic_code;
+        this.gene_name = gene_name;
+        this.gene_size = gene_size;
+        this.resistance_gene = resistance_gene;
+        this.storage = storage;
+        this.qpcr = qpcr;
+        this.silver_stain = silver_stain;
+        this.literature_used = literature_used;
+        this.application = application;
+        this.application_object_atrain = application_object_atrain;
+        this.bio_organization = bio_organization;
+        this.application_way = application_way;
+        this.volume = volume;
+        this.infection_time = infection_time;
+        this.is_achieve_goal = is_achieve_goal;
+        this.cost_performance = cost_performance;
+        this.overall_evaluation = overall_evaluation;
+        this.comments = comments;
+        this.drawings_show = drawings_show;
+        this.URL = URL;
+        this.img = img;
+        this.createdate = createdate;
+        this.recorderemail = recorderemail;
     }
 }

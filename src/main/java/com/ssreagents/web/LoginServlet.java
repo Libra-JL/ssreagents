@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.UUID;
 
 /**
  * @author Libra
@@ -29,10 +30,12 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 
 
+
+
         if (us.login(new User(null, null, password, email, null, null, null, null, null, null)) != null) {
             HttpSession session = request.getSession();
             session.setAttribute("email", email);
-            request.getRequestDispatcher("/pages/user/login_success.html").forward(request, response);
+            request.getRequestDispatcher("/pages/major/index.html").forward(request, response);
         } else {
             request.getRequestDispatcher("/pages/user/login.html").forward(request, response);
         }

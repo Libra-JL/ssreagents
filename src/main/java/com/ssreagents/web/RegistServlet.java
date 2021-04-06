@@ -31,10 +31,9 @@ public class RegistServlet extends HttpServlet {
         if (us.existsEmail(email)) {
             System.out.println("用户名【" + email + "】已存在");
             req.getRequestDispatcher("/pages/user/regist.html").forward(req, resp);
-            System.out.println("============================1");
         } else {
             us.registUser(new User(null, username, password, email,phone_num,school,college,identity,pi_name,student_name));
-            req.getRequestDispatcher("/pages/user/regist_success.html").forward(req, resp);
+            req.getRequestDispatcher("/pages/major/index.html").forward(req, resp);
 
         }
 
