@@ -48,6 +48,16 @@ public class JdbcUtilsTest {
     }
 
 
+    @Test
+    public void test5(){
+        String name  = "a.b.c.jpg";
+
+        String substring = name.substring(name.lastIndexOf("."));
+
+
+    }
+
+
 }
 
 
