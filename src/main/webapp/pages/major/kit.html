@@ -60,7 +60,6 @@
             </tr>
 
 
-
             <tr>
                 <td width="100px" height="40px">血清型</td>
                 <td width="100px" height="40px">
@@ -101,7 +100,7 @@
                         <option value="MCK">MCK</option>
                         <option value="MBP">MBP</option>
                         <option value="INSULIN">INSULIN</option>
-                        <option value="HCRAopE-hAAT">HCRAopE-hAAT </option>
+                        <option value="HCRAopE-hAAT">HCRAopE-hAAT</option>
                         <option value="GFAP104">GFAP104</option>
                         <option value="GFAP">GFAP</option>
                         <option value="EFFS">EFFS</option>
@@ -263,9 +262,12 @@
                 </td>
             </tr>
             <tr>
-                <td width="100px" height="40px">图片上传</td>
-                <td width="100px" height="40px"><input type="file" multiple="multiple" name="img"></td>
-                <td width="100px" height="40px" colspan="2"><input type="submit" value="提交"></td>
+                <td width="100px" height="40px" colspan="1">图片上传</td>
+                <td width="100px" height="40px" colspan="2">
+                    <input type="file" multiple="multiple" name="img" id="photoFile">
+                    <button onclick="upload()">上传</button>
+                </td>
+                <td width="100px" height="40px" colspan="1"><input type="submit" value="提交"></td>
 
             </tr>
 
