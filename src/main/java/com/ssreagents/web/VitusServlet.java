@@ -20,6 +20,7 @@ import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class VitusServlet extends HttpServlet {
@@ -33,6 +34,7 @@ public class VitusServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
 
         Vitus vitus = new Vitus();
+        List<String> formAttr = new ArrayList<>();
 
         if (ServletFileUpload.isMultipartContent(request)) {
 
@@ -44,18 +46,16 @@ public class VitusServlet extends HttpServlet {
 
                 for (FileItem fileItem : fileItems) {
                     if (fileItem.isFormField()) {
-                        //set普通表单项
-
-                        System.out.println("name"+fileItem.getFieldName());
-                        System.out.println("value"+fileItem.getString("gbk"));
-
+                        //普通表单项
+                        formAttr.add(fileItem.getString("gbk"));
 
                     } else {
                         //上传文件到指定文件夹并改名
-                        //set文件表单并获取存放路径
-                        String substring = fileItem.getName().substring(fileItem.getName().lastIndexOf("."));
-                        String uuid = UUIDGenerator.getUUID();
-                        fileItem.write(new File("F:\\vitus\\"+uuid+substring));
+                        //文件表单并获取存放路径
+                        String sufix = fileItem.getName().substring(fileItem.getName().lastIndexOf("."));
+                        String rename = UUIDGenerator.getUUID();
+                        fileItem.write(new File("F:\\vitus\\"+rename+sufix));
+                        formAttr.add("F:\\vitus\\"+rename+sufix);
                     }
                 }
 
@@ -64,55 +64,47 @@ public class VitusServlet extends HttpServlet {
                 e.printStackTrace();
             }
 
-
         }
 
-//        String brand = request.getParameter("brand");
-//        System.out.println(brand);
-//        String product_name = request.getParameter("product_name");
-//        String goods_num = request.getParameter("goods_num");
-//        String batch_num = request.getParameter("batch_num");
-//        String specifications = request.getParameter("specifications");
-//        String price = request.getParameter("price");
-//        String goods_time = request.getParameter("goods_time");
-//        String period_validity = request.getParameter("period_validity");
-//        String seroytpe = request.getParameter("seroytpe");
-//        String promoter = request.getParameter("promoter");
-//        String element = request.getParameter("element");
-//        String fluorescent = request.getParameter("fluorescent");
-//        String genetic_code = request.getParameter("genetic_code");
-//        String gene_name = request.getParameter("gene_name");
-//        String gene_size = request.getParameter("gene_size");
-//        String resistance_gene = request.getParameter("resistance_gene");
-//        String storage = request.getParameter("storage");
-//        String qpcr = request.getParameter("qpcr");
-//        String silver_stain = request.getParameter("silver_stain");
-//        String literature_used = request.getParameter("literature_used");
-//
-//        String application = request.getParameter("application");
-//        String application_object_atrain = request.getParameter("application_object_atrain");
-//        String bio_organization = request.getParameter("bio_organization");
-//        String application_way = request.getParameter("application_way");
-//        String volume = request.getParameter("volume");
-//        String infection_time = request.getParameter("infection_time");
-//        String is_achieve_goal = request.getParameter("is_achieve_goal");
-//        String cost_performance = request.getParameter("cost_performance");
-//        String overall_evaluation = request.getParameter("overall_evaluation");
-//        String comments = request.getParameter("comments");
-//        String drawings_show = request.getParameter("drawings_show");
-//        String url = request.getParameter("URL");
-//        //图片上传
-//        String img = request.getParameter("img");
-//        LocalDateTime createrecordertime = LocalDateTime.now();
-//        HttpSession session = request.getSession();
-//        String email = (String) session.getAttribute("email");
-//
-//
-//        vs.saveVitus(new Vitus(brand, product_name, goods_num, batch_num, specifications, price, goods_time,
-//                period_validity, seroytpe, promoter, element, fluorescent, genetic_code, gene_name, gene_size, resistance_gene, storage,
-//                qpcr, silver_stain, literature_used, application, application_object_atrain, bio_organization, application_way,
-//                volume, infection_time, is_achieve_goal, cost_performance, overall_evaluation, comments, drawings_show, url, img, createrecordertime, email));
-//
+        //id字段自增
+        String uid= UUIDGenerator.getUUID();
+        vitus.setUid(uid);
+        vitus.setBrand(formAttr.get(0));
+        vitus.setProduct_name(formAttr.get(1));
+        vitus.setGoods_num(formAttr.get(2));
+        vitus.setBatch_num(formAttr.get(0));
+        vitus.setSpecifications(formAttr.get(0));
+        vitus.setPrice(formAttr.get(0));
+        vitus.setGoods_time(formAttr.get(0));
+        vitus.setPeriod_validity(formAttr.get(0));
+        vitus.setSeroytpe(formAttr.get(0));
+        vitus.setPromoter(formAttr.get(0));
+        vitus.setFluorescent(formAttr.get(0));
+        vitus.setGenetic_code(formAttr.get(0));
+        vitus.setGene_name(formAttr.get(0));
+        vitus.setGene_size(formAttr.get(0));
+        vitus.setResistance_gene(formAttr.get(0));
+        vitus.setStorage(formAttr.get(0));
+        vitus.setQpcr(formAttr.get(0));
+        vitus.setSilver_stain(formAttr.get(0));
+        vitus.setLiterature_used(formAttr.get(0));
+
+        vitus.setApplication(formAttr.get(0));
+        vitus.setApplication_object_atrain(formAttr.get(0));
+        vitus.setBio_organization(formAttr.get(0));
+        vitus.setApplication_way(formAttr.get(0));
+        vitus.setVolume(formAttr.get(0));
+        vitus.setInfection_time(formAttr.get(0));
+        vitus.setIs_achieve_goal(formAttr.get(0));
+        vitus.setCost_performance(formAttr.get(0));
+        vitus.setOverall_evaluation(formAttr.get(0));
+        vitus.setComments(formAttr.get(0));
+        vitus.setDrawings_show(formAttr.get(0));
+        vitus.setURL(formAttr.get(0));
+        vitus.setImg(formAttr.get(0));
+
+        vs.saveVitus(vitus);
+
 //        request.getRequestDispatcher("").forward(request, response);
 
     }
