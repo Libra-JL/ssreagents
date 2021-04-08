@@ -151,7 +151,7 @@ public class VitusServlet extends HttpServlet {
         vs.saveVitusBasic(vitus);
         vs.saveVitusExtend(vitus);
 
-        request.getRequestDispatcher("/pages/major/index.html").forward(request, response);
+        request.getRequestDispatcher("/pages/major/SuccessSubmit.html").forward(request, response);
 
     }
 
