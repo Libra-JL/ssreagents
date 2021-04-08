@@ -49,8 +49,8 @@ public class VitusServlet extends HttpServlet {
                     } else {
                         //上传文件到指定文件夹并改名
                         //文件表单并获取存放路径
-                        System.out.println("================="+fileItem.getName());
-                        if (fileItem.getName()!=""){
+                        System.out.println("=================" + fileItem.getName());
+                        if (fileItem.getName() != "") {
                             String sufix = fileItem.getName().substring(fileItem.getName().lastIndexOf("."));
                             String rename = UUIDGenerator.getUUID();
                             String imgName = fileItem.getFieldName() + "" + (++imgflag);
@@ -148,7 +148,16 @@ public class VitusServlet extends HttpServlet {
         System.out.println(vitus.toString());
 
 
+        /**
+         * 如果ajax中设置的标志存在为true
+         *         vs.saveVitusExtend(vitus);
+         * 为false
+         *         vs.saveVitusBasic(vitus);
+         *         vs.saveVitusExtend(vitus);
+         */
+
         vs.saveVitusBasic(vitus);
+
         vs.saveVitusExtend(vitus);
 
         request.getRequestDispatcher("/pages/major/SuccessSubmit.html").forward(request, response);

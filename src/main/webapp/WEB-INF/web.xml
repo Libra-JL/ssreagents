@@ -20,6 +20,15 @@
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.ssreagents.web.LoginServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UniqueAjaxServlet</servlet-name>
+        <servlet-class>com.ssreagents.web.UniqueAjaxServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UniqueAjaxServlet</servlet-name>
+        <url-pattern>/UniqueAjaxServlet</url-pattern>
+    </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
