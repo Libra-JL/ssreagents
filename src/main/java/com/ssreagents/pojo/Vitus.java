@@ -1,5 +1,6 @@
 package com.ssreagents.pojo;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -42,14 +43,14 @@ public class Vitus {
     private String comments;
     private String drawings_show;
     private String URL;
-    private String img;
+    private String img1;
+    private String img2;
+    private String img3;
+    private String img4;
+    private String img5;
 
-    private LocalDateTime createdate;
+    private Timestamp createdate;
     private String recorderemail;
-
-    public Vitus(String brand, String product_name, String goods_num, String batch_num, String specifications, String price, String goods_time, String period_validity, String seroytpe, String promoter, String element, String fluorescent, String genetic_code, String gene_name, String gene_size, String resistance_gene, String storage, String qpcr, String silver_stain, String literature_used, String application, String application_object_atrain, String bio_organization, String application_way, String volume, String infection_time, String is_achieve_goal, String cost_performance, String overall_evaluation, String comments, String drawings_show, String url, String img, LocalDateTime createrecordertime, String email) {
-    }
-
 
     @Override
     public String toString() {
@@ -88,7 +89,11 @@ public class Vitus {
                 ", comments='" + comments + '\'' +
                 ", drawings_show='" + drawings_show + '\'' +
                 ", URL='" + URL + '\'' +
-                ", img='" + img + '\'' +
+                ", img1='" + img1 + '\'' +
+                ", img2='" + img2 + '\'' +
+                ", img3='" + img3 + '\'' +
+                ", img4='" + img4 + '\'' +
+                ", img5='" + img5 + '\'' +
                 ", createdate=" + createdate +
                 ", recorderemail='" + recorderemail + '\'' +
                 '}';
@@ -137,14 +142,18 @@ public class Vitus {
                 Objects.equals(comments, vitus.comments) &&
                 Objects.equals(drawings_show, vitus.drawings_show) &&
                 Objects.equals(URL, vitus.URL) &&
-                Objects.equals(img, vitus.img) &&
+                Objects.equals(img1, vitus.img1) &&
+                Objects.equals(img2, vitus.img2) &&
+                Objects.equals(img3, vitus.img3) &&
+                Objects.equals(img4, vitus.img4) &&
+                Objects.equals(img5, vitus.img5) &&
                 Objects.equals(createdate, vitus.createdate) &&
                 Objects.equals(recorderemail, vitus.recorderemail);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, uid, brand, product_name, goods_num, batch_num, specifications, price, goods_time, period_validity, seroytpe, promoter, element, fluorescent, genetic_code, gene_name, gene_size, resistance_gene, storage, qpcr, silver_stain, literature_used, application, application_object_atrain, bio_organization, application_way, volume, infection_time, is_achieve_goal, cost_performance, overall_evaluation, comments, drawings_show, URL, img, createdate, recorderemail);
+        return Objects.hash(id, uid, brand, product_name, goods_num, batch_num, specifications, price, goods_time, period_validity, seroytpe, promoter, element, fluorescent, genetic_code, gene_name, gene_size, resistance_gene, storage, qpcr, silver_stain, literature_used, application, application_object_atrain, bio_organization, application_way, volume, infection_time, is_achieve_goal, cost_performance, overall_evaluation, comments, drawings_show, URL, img1, img2, img3, img4, img5, createdate, recorderemail);
     }
 
     public Integer getId() {
@@ -419,19 +428,51 @@ public class Vitus {
         this.URL = URL;
     }
 
-    public String getImg() {
-        return img;
+    public String getImg1() {
+        return img1;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setImg1(String img1) {
+        this.img1 = img1;
     }
 
-    public LocalDateTime getCreatedate() {
+    public String getImg2() {
+        return img2;
+    }
+
+    public void setImg2(String img2) {
+        this.img2 = img2;
+    }
+
+    public String getImg3() {
+        return img3;
+    }
+
+    public void setImg3(String img3) {
+        this.img3 = img3;
+    }
+
+    public String getImg4() {
+        return img4;
+    }
+
+    public void setImg4(String img4) {
+        this.img4 = img4;
+    }
+
+    public String getImg5() {
+        return img5;
+    }
+
+    public void setImg5(String img5) {
+        this.img5 = img5;
+    }
+
+    public Timestamp getCreatedate() {
         return createdate;
     }
 
-    public void setCreatedate(LocalDateTime createdate) {
+    public void setCreatedate(Timestamp createdate) {
         this.createdate = createdate;
     }
 
@@ -446,8 +487,7 @@ public class Vitus {
     public Vitus() {
     }
 
-    public Vitus(Integer id, String uid, String brand, String product_name, String goods_num, String batch_num, String specifications, String price, String goods_time, String period_validity, String seroytpe, String promoter, String element, String fluorescent, String genetic_code, String gene_name, String gene_size, String resistance_gene, String storage, String qpcr, String silver_stain, String literature_used, String application, String application_object_atrain, String bio_organization, String application_way, String volume, String infection_time, String is_achieve_goal, String cost_performance, String overall_evaluation, String comments, String drawings_show, String URL, String img, LocalDateTime createdate, String recorderemail) {
-
+    public Vitus(Integer id, String uid, String brand, String product_name, String goods_num, String batch_num, String specifications, String price, String goods_time, String period_validity, String seroytpe, String promoter, String element, String fluorescent, String genetic_code, String gene_name, String gene_size, String resistance_gene, String storage, String qpcr, String silver_stain, String literature_used, String application, String application_object_atrain, String bio_organization, String application_way, String volume, String infection_time, String is_achieve_goal, String cost_performance, String overall_evaluation, String comments, String drawings_show, String URL, String img1, String img2, String img3, String img4, String img5, Timestamp createdate, String recorderemail) {
         this.id = id;
         this.uid = uid;
         this.brand = brand;
@@ -482,7 +522,11 @@ public class Vitus {
         this.comments = comments;
         this.drawings_show = drawings_show;
         this.URL = URL;
-        this.img = img;
+        this.img1 = img1;
+        this.img2 = img2;
+        this.img3 = img3;
+        this.img4 = img4;
+        this.img5 = img5;
         this.createdate = createdate;
         this.recorderemail = recorderemail;
     }

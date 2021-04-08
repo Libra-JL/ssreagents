@@ -3,5 +3,6 @@ package com.ssreagents.service;
 import com.ssreagents.pojo.Vitus;
 
 public interface VitusService {
-    public int saveVitus(Vitus vitus);
+    public int saveVitusBasic(Vitus vitus);
+    public int saveVitusExtend(Vitus vitus);
 }

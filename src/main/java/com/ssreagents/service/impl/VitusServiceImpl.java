@@ -9,9 +9,14 @@ public class VitusServiceImpl implements VitusService {
 
     private VitusDao vd = new VitusDaoImpl();
 
-    @Override
-    public int saveVitus(Vitus vitus) {
 
-        return vd.saveVitus(vitus);
+    @Override
+    public int saveVitusBasic(Vitus vitus) {
+        return vd.saveVitusBasic(vitus);
+    }
+
+    @Override
+    public int saveVitusExtend(Vitus vitus) {
+        return vd.saveVitusExtend(vitus);
     }
 }

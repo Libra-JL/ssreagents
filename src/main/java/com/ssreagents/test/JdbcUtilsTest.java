@@ -7,7 +7,10 @@ import org.junit.Test;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 public class JdbcUtilsTest {
     @Test
@@ -45,6 +48,19 @@ public class JdbcUtilsTest {
 
         System.out.println();
 //        java.sql.Date date1 = new java.sql.Date();
+    }
+
+    @Test
+    public void test4(){
+        LocalDateTime now = LocalDateTime.now();
+        Timestamp timestamp = Timestamp.valueOf(now);
+        System.out.println(timestamp);
+        Date date = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String format = simpleDateFormat.format(date);
+        System.out.println(format);
+
+
     }
 
 
