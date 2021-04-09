@@ -20,12 +20,15 @@
             <tr>
                 <td width="100px" height="40px">品牌</td>
                 <td width="100px" height="40px">
-                    <select name="brand">
+                    <select id="brand" name="brand">
                         <option value="请选择">--请选择品牌--</option>
                         <option value="维真">维真</option>
                         <option value="维真1">维真1</option>
                         <option value="维真2">维真2</option>
+                        <option value="1">1</option>
+                        <option value="其他">其他</option>
                     </select>
+                    <span></span>
                 </td>
                 <td width="100px" height="40px">产品名称</td>
                 <td width="100px" height="40px">
@@ -35,11 +38,12 @@
             <tr>
                 <td width="100px" height="40px">货号</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="goods_num">
+                    <input width="96" type="text" name="goods_num" id="goods_num">
                 </td>
                 <td width="100px" height="40px">批次号</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="batch_num">
+                    <input width="96" type="text" name="batch_num" id="batch_num">
+                    <button type="button" id="searchproduct">查询</button>
                 </td>
             </tr>
             <tr>
@@ -96,6 +100,7 @@
                         <option value="rAAV2/1">--请选择启动子--</option>
                         <option value="UBC">UBC</option>
                         <option value="TBG">TBG</option>
+                        <option value="TBG">SYN</option>
                         <option value="SST">SST</option>
                         <option value="RPE65">RPE65</option>
                         <option value="PGK">PGK</option>
@@ -278,9 +283,63 @@
         </table>
 
 
-
     </form>
 </div>
 
+<script src="static/script/jquery-1.7.2.js"></script>
+
+
+<script type="text/javascript">
+
+    $("#brand").focusout(function () {
+        if ($("#brand").val() == "请选择") {
+            alert("请选择品牌名称")
+        }
+    });
+    //病毒类型校验
+    //产品名称校验
+    //产品货号校验
+    //产品批次号校验
+    //产品规格校验
+    //产品加个校验
+    //血清型校验
+    //启动子校验
+    //原件校验
+    //滴度校验
+    //应用校验
+    //应用对象品系校验
+    //组织校验
+    //应用方式校验
+    //体积校验
+    //感染后表达时间校验
+    //评分校验1
+    //评分校验2
+    //评分校验3
+
+
+</script>
+
+<script type="text/javascript">
+
+    $("#searchproduct").click(function () {
+
+        alert("")
+        // var a = $("#brand").serialize();
+        // var b = $("#goods_num").serialize();
+        // var c = $("#batch_num").serialize();
+        $.ajax({
+            url: "http://localhost:8080/ssreagents/unique",
+            // data: {action: "vitusBasicUnique"},
+            type: "POST",
+            success: function (data) {
+                alert(data)
+            },
+            dataType: "json"
+        });
+
+
+    })
+
+</script>
 </body>
 </html>

@@ -19,4 +19,9 @@ public class VitusServiceImpl implements VitusService {
     public int saveVitusExtend(Vitus vitus) {
         return vd.saveVitusExtend(vitus);
     }
+
+    @Override
+    public Vitus getVitusBasic(Vitus vitus) {
+        return null;
+    }
 }
