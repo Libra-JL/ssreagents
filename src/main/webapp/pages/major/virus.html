@@ -32,7 +32,7 @@
                 </td>
                 <td width="100px" height="40px">产品名称</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="product_name">
+                    <input width="96" type="text" name="product_name" id="product_name">
                 </td>
             </tr>
             <tr>
@@ -49,21 +49,21 @@
             <tr>
                 <td width="100px" height="40px">规格</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="specifications">μl
+                    <input width="96" type="text" name="specifications" id="specifications">μl
                 </td>
                 <td width="100px" height="40px">价格</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="price">元
+                    <input width="96" type="text" name="price" id="price">元
                 </td>
             </tr>
             <tr>
                 <td width="100px" height="40px">货期</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="goods_time">周
+                    <input width="96" type="text" name="goods_time" id="goods_time">周
                 </td>
                 <td width="100px" height="40px">有效期</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="period_validity">年
+                    <input width="96" type="text" name="period_validity" id="period_validity">年
                 </td>
             </tr>
 
@@ -71,7 +71,7 @@
             <tr>
                 <td width="100px" height="40px">血清型</td>
                 <td width="100px" height="40px">
-                    <select class="selectSeroytpe" name="seroytpe">
+                    <select class="selectSeroytpe" name="seroytpe" id="seroytpe">
                         <option value="--请选择血清型--">--请选择血清型--</option>
                         <option value="rAAV2/1">rAAV2/1</option>
                         <option value="rAAV2/2">rAAV2/2</option>
@@ -96,7 +96,7 @@
                 </td>
                 <td width="100px" height="40px">启动子</td>
                 <td width="100px" height="40px">
-                    <select name="promoter">
+                    <select name="promoter" id="promoter">
                         <option value="rAAV2/1">--请选择启动子--</option>
                         <option value="UBC">UBC</option>
                         <option value="TBG">TBG</option>
@@ -130,7 +130,7 @@
             <tr>
                 <td width="100px" height="40px">元件</td>
                 <td width="100px" height="40px">
-                    <select name="element">
+                    <select name="element" id="element">
                         <option value="--请选择元件--">--请选择元件--</option>
                         <option value="tTA">tTA</option>
                         <option value="RFP">RFP</option>
@@ -147,7 +147,7 @@
                 </td>
                 <td width="100px" height="40px">荧光标签</td>
                 <td width="100px" height="40px">
-                    <select name="fluorescent">
+                    <select name="fluorescent" id="fluorescent">
                         <option value="请选择荧光标签">--请选择荧光标签--</option>
                         <option value="GFP">GFP</option>
                         <option value="RFP">RFP</option>
@@ -160,43 +160,48 @@
             <tr>
                 <td width="100px" height="40px">基因编号</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="genetic_code">
+                    <input width="96" type="text" name="genetic_code" id="genetic_code">
                 </td>
                 <td width="100px" height="40px">基因名称</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="gene_name">
+                    <input width="96" type="text" name="gene_name" id="gene_name">
                 </td>
             </tr>
             <tr>
                 <td width="100px" height="40px">基因大小</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="gene_size">
+                    <input width="96" type="text" name="gene_size" id="gene_size">
                 </td>
                 <td width="100px" height="40px">抗性基因</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="resistance_gene">
+                    <input width="96" type="text" name="resistance_gene" id="resistance_gene">
                 </td>
             </tr>
             <tr>
                 <td width="100px" height="40px">存放说明</td>
                 <td width="100px" height="40px">
-                    <textarea name="storage"></textarea>
+                    <textarea name="storage" id="storage"></textarea>
                 </td>
                 <td width="100px" height="40px">qPCR滴度</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="qpcr">
+                    <input width="96" type="text" name="qpcr" id="qpcr">
                 </td>
             </tr>
             <tr>
                 <td width="100px" height="40px">银染滴度</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="silver_stain">
+                    <input width="96" type="text" name="silver_stain" id="silver_stain">
                 </td>
                 <td width="100px" height="40px">哪些文献中使用过</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="literature_used">
+                    <input width="96" type="text" name="literature_used" id="literature_used">
                 </td>
             </tr>
+
+            <tr>
+                <td colspan="4" bgcolor="#00bfff"><span>=============================================================================================</span></td>
+            </tr>
+
             <tr>
                 <td width="100px" height="40px">应用</td>
                 <td width="100px" height="40px">
@@ -322,24 +327,43 @@
 <script type="text/javascript">
 
     $("#searchproduct").click(function () {
+        var a = $("#brand").val();
+        var b = $("#goods_num").val();
+        var c = $("#batch_num").val();
 
-        alert("")
-        // var a = $("#brand").serialize();
-        // var b = $("#goods_num").serialize();
-        // var c = $("#batch_num").serialize();
         $.ajax({
             url: "http://localhost:8080/ssreagents/unique",
-            // data: {action: "vitusBasicUnique"},
+            data: {"brand":a,"goods_num":b,"batch_num":c},
             type: "POST",
             success: function (data) {
-                alert(data)
+               if (data!=null){
+                   $("#product_name").val(data.product_name)
+                   $("#specifications").val(data.specifications)
+                   $("#price").val(data.price)
+                   $("#goods_time").val(data.goods_time)
+                   $("#period_validity").val(data.period_validity)
+                   $("#seroytpe").val(data.seroytpe)
+                   $("#promoter").val(data.promoter)
+                   $("#element").val(data.element)
+                   $("#fluorescent").val(data.fluorescent)
+                   $("#genetic_code").val(data.genetic_code)
+                   $("#gene_name").val(data.gene_name)
+                   $("#gene_size").val(data.gene_size)
+                   $("#resistance_gene").val(data.resistance_gene)
+                   $("#storage").val(data.storage)
+                   $("#qpcr").val(data.qpcr)
+                   $("#silver_stain").val(data.silver_stain)
+                   $("#literature_used").val(data.literature_used)
+               }else {
+                   alert("请检查是否输入错误，如果正确那么库中尚不存在该产品")
+               }
+
             },
             dataType: "json"
         });
 
-
     })
-
 </script>
+
 </body>
 </html>
