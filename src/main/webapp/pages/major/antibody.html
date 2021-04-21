@@ -1,225 +1,351 @@
 <html>
 <head>
-    <title>Êäó‰Ωì</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="GBK">
+
+    <title>øπÃÂ</title>
+    <base href="http://localhost:8080/ssreagents/">
+
 </head>
 <body>
 <div class="antibodyform">
     <form action="vitus" method="post" enctype="multipart/form-data">
         <table border="1px solid #ccc" cellspacing="0" cellpadding="0">
             <tr>
-                <td width="150px" height="40px">Â±ûÊÄß</td>
-                <td width="300px" height="40px">ÂÜÖÂÆπ</td>
-                <td width="150px" height="40px">Â±ûÊÄß</td>
-                <td width="300px" height="40px">ÂÜÖÂÆπ</td>
+                <td width="150px" height="40px"> Ù–‘</td>
+                <td width="300px" height="40px">ƒ⁄»›</td>
+                <td width="150px" height="40px"> Ù–‘</td>
+                <td width="300px" height="40px">ƒ⁄»›</td>
 
             </tr>
             <tr>
-                <td width="100px" height="40px">ÂìÅÁâå</td>
+                <td width="100px" height="40px">∆∑≈∆</td>
                 <td width="100px" height="40px">
-                    <select name="brand">
-                        <option value="ËØ∑ÈÄâÊã©">--ËØ∑ÈÄâÊã©ÂìÅÁâå--</option>
-                        <option value="abclonal">abclonal</option>
-                        <option value="abclonal1">abclonal1</option>
-                        <option value="abclonal2">abclonal2</option>
+                    <select id="brand" name="brand">
+                        <option value="«Î—°‘Ò">--«Î—°‘Ò∆∑≈∆--</option>
+                        <option value="abcam">abcam</option>
+                        <option value="invitrogen">invitrogen</option>
+                        <option value="abcam2">abcam2</option>
+                        <option value="1">1</option>
+                        <option value="∆‰À˚">∆‰À˚</option>
+                    </select>
+                    <span></span>
+                </td>
+
+
+                <td width="100px" height="40px">≤˙∆∑¿‡±</td>
+                <td width="100px" height="40px">
+                    <select id="kind" name="kind">
+                        <option value="«Î—°‘Ò">--«Î—°‘Ò≤˙∆∑¿‡±--</option>
+                        <option value="“ªøπ">“ªøπ</option>
+                        <option value="∂˛øπ">∂˛øπ</option>
                     </select>
                 </td>
-                <td width="100px" height="40px">‰∫ßÂìÅÂêçÁß∞</td>
-                <td width="100px" height="40px">
-                    <input width="96" type="text" name="product_name">
-                </td>
             </tr>
             <tr>
-                <td width="100px" height="40px">Ë¥ßÂè∑</td>
+
+                <td width="100px" height="40px">≤˙∆∑√˚≥∆</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="goods_num">
+                    <input width="96" type="text" name="product_name" id="product_name">
                 </td>
-                <td width="100px" height="40px">ÊâπÊ¨°Âè∑</td>
+                <td width="100px" height="40px">ªı∫≈</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="batch_num">
+                    <input width="96" type="text" name="goods_num" id="goods_num">
                 </td>
+
             </tr>
             <tr>
-                <td width="100px" height="40px">ËßÑÊ†º</td>
+                <td width="100px" height="40px">≈˙¥Œ∫≈</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="specifications">Œºl
+                    <input width="96" type="text" name="batch_num" id="batch_num">
+                    <button type="button" id="searchproduct">≤È—Ø</button>
                 </td>
-                <td width="100px" height="40px">‰ª∑Ê†º</td>
+                <td width="100px" height="40px">πÊ∏Ò</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="price">ÂÖÉ
+                    <input width="96" type="text" name="specifications" id="specifications">¶Ãl
                 </td>
+
             </tr>
             <tr>
-                <td width="100px" height="40px">Ë¥ßÊúü</td>
+                <td width="100px" height="40px">≈®∂»</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="goods_time">Âë®
+                    <input width="96" type="text" name="concentration" id="concentration">mg/ml
                 </td>
-                <td width="100px" height="40px">ÊúâÊïàÊúü</td>
+                <td width="100px" height="40px">º€∏Ò</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="period_validity">Âπ¥
+                    <input width="96" type="text" name="price" id="price">‘™
                 </td>
             </tr>
 
 
             <tr>
-                <td width="100px" height="40px">Ë°ÄÊ∏ÖÂûã</td>
+                <td width="100px" height="40px">Àﬁ÷˜</td>
                 <td width="100px" height="40px">
-                    <select class="selectSeroytpe" name="seroytpe">
-                        <option value="--ËØ∑ÈÄâÊã©Ë°ÄÊ∏ÖÂûã--">--ËØ∑ÈÄâÊã©Ë°ÄÊ∏ÖÂûã--</option>
-                        <option value="rAAV2/1">rAAV2/1</option>
-                        <option value="rAAV2/2">rAAV2/2</option>
-                        <option value="rAAV2/3">rAAV2/3</option>
-                        <option value="rAAV2/4">rAAV2/4</option>
-                        <option value="rAAV2/5">rAAV2/5</option>
-                        <option value="rAAV2/6">rAAV2/6</option>
-                        <option value="rAAV2/7">rAAV2/7</option>
-                        <option value="AAV2/8">rAAV2/8</option>
-                        <option value="rAAV2/9">rAAV2/9</option>
-                        <option value="aav-retro">Raav-retro</option>
-                        <option value="AV-PHP.eB">AAV-PHP.eB</option>
-                        <option value="AAV-PHP.S">AAV-PHP.S</option>
-                        <option value="AV-PAN">AAV-PAN</option>
-                        <option value="AAV-LUNG">AAV-LUNG</option>
-                        <option value="AAV-DJ">AAV-DJ</option>
-                        <option value="AAV-7m">AAV-7m8</option>
-                        <option value="AAV-ShH10Y">AAV-ShH10Y</option>
-                        <option value="AAV-Rh10">AAV-Rh10</option>
-                        <option value="3XMCK">AAV-Anc80L65</option>
+                    <select class="selectParasitifer" name="parasitifer" id="parasitifer">
+                        <option value="--«Î—°‘ÒÀﬁ÷˜--">--«Î—°‘ÒÀﬁ÷˜--</option>
+                        <option value="Rabbit">Rabbit</option>
+                        <option value="Mouse">Mouse</option>
+                        <option value="Rat">Rat</option>
+                        <option value="Goat">Goat</option>
+                        <option value="Sheep">Sheep</option>
+                        <option value="Armenian ">Armenian</option>
+                        <option value="hamster ">hamster</option>
+                        <option value="Chicken">Chicken</option>
+                        <option value="Guinea_pig">Guinea_pig</option>
+                        <option value="Syrian_hamste">Syrian_hamste</option>
+                        <option value="Human">Human</option>
+                        <option value="Mixed">Mixed</option>
+                        <option value="Donkey ">Donkey</option>
+                        <option value="Bovine ">Bovine</option>
+                        <option value="Horse">Horse</option>
+                        <option value="other">other</option>
                     </select>
                 </td>
-                <td width="100px" height="40px">ÂêØÂä®Â≠ê</td>
+                <td width="100px" height="40px">øÀ¬°–‘</td>
                 <td width="100px" height="40px">
-                    <select name="promoter">
-                        <option value="rAAV2/1">--ËØ∑ÈÄâÊã©ÂêØÂä®Â≠ê--</option>
-                        <option value="UBC">UBC</option>
-                        <option value="TBG">TBG</option>
-                        <option value="SST">SST</option>
-                        <option value="RPE65">RPE65</option>
-                        <option value="PGK">PGK</option>
-                        <option value="NSE">NSE</option>
-                        <option value="MECP2">MECP2</option>
-                        <option value="MCK">MCK</option>
+                    <select class="selectCloned" name="cloned" id="cloned">
+                        <option value="--«Î—°‘ÒøÀ¬°–‘--">--«Î—°‘ÒøÀ¬°–‘--</option>
+                        <option value="Polyclonal">Polyclonal</option>
+                        <option value="Monoclonal">Monoclonal</option>
+                        <option value="Recombinant">Recombinant</option>
+                        <option value="Monoclonal">Monoclonal</option>
+                        <option value="Recombinant">Recombinant</option>
+                        <option value="Cocktail ">Cocktail</option>
+                        <option value="other">other</option>
+                    </select>
+                </td>
+
+            </tr>
+            <tr>
+                <td width="100px" height="40px">µ∞∞◊∞–±Í</td>
+
+                <td width="100px" height="40px">
+                    <!--           ∫Û∆⁄–ﬁ∏ƒ∞¥ ˝◊÷º∞◊÷ƒ∏–°–¥¥Û–¥≈≈–Ú         -->
+                    <select name="Protein_targets" id="Protein_targets">
+                        <option value="--«Î—°‘Òµ∞∞◊∞–±Í--">--«Î—°‘Òµ∞∞◊∞–±Í--</option>
+                        <option value="tgf beta">tgf&nbsp;&nbsp;beta</option>
+                        <option value="P2y12">P2y12</option>
+                        <option value="TNF-alpha">TNF-alpha</option>
+                        <option value="Tie2">Tie2</option>
+                        <option value="Neurofilament">Neurofilament</option>
+                        <option value="neun">neun</option>
+                        <option value="Mmp2">Mmp2</option>
+                        <option value="IL-1 beta">IL-1&nbsp;&nbsp;beta</option>
+                        <option value="Iba1">Iba1</option>
+                        <option value="gapdh">gapdh</option>
+                        <option value="chicken">chicken</option>
+                        <option value="goat">goat</option>
+                        <option value="mouse">mouse</option>
+                        <option value="rabbit">rabbit</option>
+                        <option value="5ht">5ht</option>
+                        <option value="Cd31">Cd31</option>
+                        <option value="Cd68">Cd68</option>
                         <option value="MBP">MBP</option>
-                        <option value="INSULIN">INSULIN</option>
-                        <option value="HCRAopE-hAAT">HCRAopE-hAAT</option>
-                        <option value="GFAP104">GFAP104</option>
-                        <option value="GFAP">GFAP</option>
-                        <option value="EFFS">EFFS</option>
-                        <option value="EF1a">EF1a</option>
-                        <option value="cTNT">cTNT</option>
-                        <option value="CK1.3">CK1.3</option>
-                        <option value="CK0.4">CK0.4</option>
-                        <option value="c-fos">c-fos</option>
-                        <option value="CamKIIa">CamKIIa</option>
-                        <option value="CAG">CAG</option>
-                        <option value="aMHC">aMHC</option>
-                        <option value="ALB">ALB</option>
-                        <option value="3XMCK">3XMCK</option>
+                        <option value="Ang2">Ang2</option>
+                        <option value="Bax">Bax</option>
+                        <option value="Bcl2">Bcl2</option>
+                        <option value="Ccl2">Ccl2</option>
+                        <option value="fibronectin">fibronectin</option>
+                    </select>
+                </td>
+                <td width="100px" height="40px">”¶”√∑∂Œß</td>
+                <td width="100px" height="40px">
+                    <select name="applied_range" id="applied_range">
+                        <option value="--«Î—°‘Ò”¶”√∑∂Œß--">--«Î—°‘Ò”¶”√∑∂Œß--</option>
+                        <option value="ICC/IF">ICC/IF</option>
+                        <option value="WB">WB</option>
+                        <option value="Dot">Dot</option>
+                        <option value="ICC">ICC</option>
+                        <option value="Tie2">EIA</option>
+                        <option value="Neurofilament">ELISA</option>
+                        <option value="neun">ELISpot</option>
+                        <option value="Mmp2">EM</option>
+                        <option value="IL-1 beta">EMSA</option>
+                        <option value="Iba1">Flow</option>
+                        <option value="gapdh">Cyt(Intra)</option>
+                        <option value="chicken">FM</option>
+                        <option value="goat">FPIA</option>
+                        <option value="mouse">FRET</option>
+                        <option value="rabbit">FuncS</option>
+                        <option value="5ht">GSA</option>
+                        <option value="Cd31">H</option>
+                        <option value="Cd68">High throughput screening</option>
+                        <option value="MBP">HPLC</option>
+                        <option value="Ang2">IA</option>
+                        <option value="Bax">ID</option>
+                        <option value="Bcl2">Ie</option>
+                        <option value="Ccl2">I-ELISA</option>
+                        <option value="Ccl2">IHC</option>
+                        <option value="Ccl2">IHC®CWmt</option>
+                        <option value="Ccl2">IHC(Methanol fixed)</option>
+                        <option value="Ccl2">IHC(PFA fixed)</option>
+                        <option value="Ccl2">IHC-FoFr</option>
+                        <option value="Ccl2">IHC-Fr</option>
+                        <option value="Ccl2">IHC-FrFl</option>
+                        <option value="Ccl2">IHC-G</option>
+                        <option value="Ccl2">IHC-Glut</option>
+                        <option value="Ccl2">IHC-M</option>
+                        <option value="Ccl2">IM Purification</option>
+                        <option value="Ccl2">Real Time PCR</option>
+                        <option value="Ccl2">RIA</option>
+                        <option value="Ccl2">RID</option>
+                        <option value="Ccl2">RIP</option>
+                        <option value="Ccl2">RT-PCR</option>
+                        <option value="Ccl2">SB</option>
+                        <option value="Ccl2">sELISA</option>
+                        <option value="Ccl2">Size Exclusion Chromatography</option>
+                        <option value="Ccl2">TLC</option>
 
                     </select>
                 </td>
+
+
+                <!--                <td width="100px" height="40px">‘™º˛</td>-->
+                <!--                <td width="100px" height="40px">-->
+                <!--                    <select name="element" id="element">-->
+                <!--                        <option value="&#45;&#45;«Î—°‘Ò‘™º˛&#45;&#45;">&#45;&#45;«Î—°‘Ò‘™º˛&#45;&#45;</option>-->
+                <!--                        <option value="tTA">tTA</option>-->
+                <!--                        <option value="RFP">RFP</option>-->
+                <!--                        <option value="mCherry">mCherry</option>-->
+                <!--                        <option value="LacZ">LacZ</option>-->
+                <!--                        <option value="GFP">GFP</option>-->
+                <!--                        <option value="DIO-RFP">DIO-RFP</option>-->
+                <!--                        <option value="DIO-mCherry">DIO-mCherry</option>-->
+                <!--                        <option value="Dio-LacZ">Dio-LacZ</option>-->
+                <!--                        <option value="Dio-GFP">Dio-GFP</option>-->
+                <!--                        <option value="DIO">DIO</option>-->
+                <!--                        <option value="Cre">Cre</option>-->
+                <!--                    </select>-->
+                <!--                </td>-->
+                <!--                <td width="100px" height="40px">”´π‚±Í«©</td>-->
+                <!--                <td width="100px" height="40px">-->
+                <!--                    <select name="fluorescent" id="fluorescent">-->
+                <!--                        <option value="«Î—°‘Ò”´π‚±Í«©">&#45;&#45;«Î—°‘Ò”´π‚±Í«©&#45;&#45;</option>-->
+                <!--                        <option value="GFP">GFP</option>-->
+                <!--                        <option value="RFP">RFP</option>-->
+                <!--                        <option value="mCherry">mCherry</option>-->
+                <!--                        <option value="tdTomato">tdTomato</option>-->
+                <!--                        <option value="YFP">YFP</option>-->
+                <!--                    </select>-->
+                <!--                </td>-->
             </tr>
+
+
             <tr>
-                <td width="100px" height="40px">ÂÖÉ‰ª∂</td>
+                <td width="100px" height="40px">≈º¡™ŒÔ</td>
                 <td width="100px" height="40px">
-                    <select name="element">
-                        <option value="--ËØ∑ÈÄâÊã©ÂÖÉ‰ª∂--">--ËØ∑ÈÄâÊã©ÂÖÉ‰ª∂--</option>
-                        <option value="tTA">tTA</option>
-                        <option value="RFP">RFP</option>
-                        <option value="mCherry">mCherry</option>
-                        <option value="LacZ">LacZ</option>
-                        <option value="GFP">GFP</option>
-                        <option value="DIO-RFP">DIO-RFP</option>
-                        <option value="DIO-mCherry">DIO-mCherry</option>
-                        <option value="Dio-LacZ">Dio-LacZ</option>
-                        <option value="Dio-GFP">Dio-GFP</option>
-                        <option value="DIO">DIO</option>
-                        <option value="Cre">Cre</option>
+                    <select name="conjugate" id="fluorescent">
+                        <option value="«Î—°‘Ò≈∑¡™ŒÔ">--«Î—°‘Ò≈∑¡™ŒÔ--</option>
+                        <option value="GFP">Agarose</option>
+                        <option value="RFP">Alexa Fluor? 405</option>
+                        <option value="RFP">Alexa Fluor? 555</option>
+                        <option value="RFP">Alexa Fluor? 568</option>
+                        <option value="RFP">Alexa Fluor? 594</option>
+                        <option value="RFP">Alexa Fluor? 680</option>
+                        <option value="RFP">Alexa Fluor? 700</option>
+                        <option value="RFP">Alexa Fluor? 750</option>
+                        <option value="RFP">Alexa Fluor? 790</option>
+                        <option value="RFP">TRITC</option>
+                        <option value="RFP">violetFluor? 450</option>
+
                     </select>
                 </td>
-                <td width="100px" height="40px">ËçßÂÖâÊ†áÁ≠æ</td>
+
+                <td width="100px" height="40px">ªı∆⁄</td>
                 <td width="100px" height="40px">
-                    <select name="fluorescent">
-                        <option value="ËØ∑ÈÄâÊã©ËçßÂÖâÊ†áÁ≠æ">--ËØ∑ÈÄâÊã©ËçßÂÖâÊ†áÁ≠æ--</option>
-                        <option value="GFP">GFP</option>
-                        <option value="RFP">RFP</option>
-                        <option value="mCherry">mCherry</option>
-                        <option value="tdTomato">tdTomato</option>
-                        <option value="YFP">YFP</option>
-                    </select>
+                    <input width="96" type="text" name="goods_time" id="goods_time">÷‹
                 </td>
+
+
             </tr>
             <tr>
-                <td width="100px" height="40px">Âü∫Âõ†ÁºñÂè∑</td>
+                <td width="100px" height="40px">”––ß∆⁄</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="genetic_code">
+                    <input width="96" type="text" name="period_validity" id="period_validity">ƒÍ
                 </td>
-                <td width="100px" height="40px">Âü∫Âõ†ÂêçÁß∞</td>
+
+
+                <td width="100px" height="40px">øÀ¬°±‡∫≈</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="gene_name">
+                    <input width="96" type="text" name="Clone_number" id="Clone_number">
                 </td>
+
+
+            </tr>
+
+            <tr>
+
+                <td width="100px" height="40px">÷÷ Ù∑¥”¶</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="Species_reactivity" id="Species_reactivity">
+                </td>
+                <td width="100px" height="40px">ƒƒ–©Œƒœ◊÷– π”√π˝</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="literature_used" id="literature_used">
+                </td>
+
             </tr>
             <tr>
-                <td width="100px" height="40px">Âü∫Âõ†Â§ßÂ∞è</td>
+                <td width="100px" height="40px">œ‡πÿ≤˙∆∑</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="gene_size">
+                    <textarea name="related_products" id="related_products"></textarea>
                 </td>
-                <td width="100px" height="40px">ÊäóÊÄßÂü∫Âõ†</td>
+
+                <td width="100px" height="40px">√‚“ﬂ‘≠</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="resistance_gene">
+                    <textarea name="immunogen" id="immunogen"></textarea>
                 </td>
+
+
+            </tr>
+
+            <tr>
+                <td width="100px" height="40px">–Œ Ω</td>
+                <td width="100px" height="40px">
+                    <textarea name="form" id="form"></textarea>
+                </td>
+                <td width="100px" height="40px">¥Ê∑≈Àµ√˜</td>
+                <td width="100px" height="40px">
+                    <textarea name="storage" id="storage"></textarea>
+                </td>
+
+
             </tr>
             <tr>
-                <td width="100px" height="40px">Â≠òÊîæËØ¥Êòé</td>
-                <td width="100px" height="40px">
-                    <textarea name="storage"></textarea>
-                </td>
-                <td width="100px" height="40px">qPCRÊª¥Â∫¶</td>
-                <td width="100px" height="40px">
-                    <input width="96" type="text" name="qpcr">
+                <td width="100px" height="40px">¥Ê∑≈»‹“∫</td>
+                <td width="100px" height="40px" colspan="3">
+                    <textarea name="Storage_solution" id="Storage_solution"></textarea>
                 </td>
             </tr>
+
             <tr>
-                <td width="100px" height="40px">Èì∂ÊüìÊª¥Â∫¶</td>
-                <td width="100px" height="40px">
-                    <input width="96" type="text" name="silver_stain">
-                </td>
-                <td width="100px" height="40px">Âì™‰∫õÊñáÁåÆ‰∏≠‰ΩøÁî®Ëøá</td>
-                <td width="100px" height="40px">
-                    <input width="96" type="text" name="literature_used">
+                <td colspan="4" bgcolor="#00bfff"><span>=============================================================================================</span>
                 </td>
             </tr>
+
             <tr>
-                <td width="100px" height="40px">Â∫îÁî®</td>
+                <td width="100px" height="40px">”¶”√</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="application">
                 </td>
-                <td width="100px" height="40px">Â∫îÁî®ÂØπË±°ÂìÅÁ≥ª</td>
+                <td width="100px" height="40px">”¶”√∂‘œÛ∆∑œµ</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="application_object_atrain">
                 </td>
             </tr>
             <tr>
-                <td width="100px" height="40px">ÁªÑÁªá</td>
+                <td width="100px" height="40px">◊È÷Ø</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="bio_organization">
                 </td>
-                <td width="100px" height="40px">Â∫îÁî®ÊñπÂºè</td>
+                <td width="100px" height="40px">π§◊˜≈®∂»</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="application_way">
+                    <input width="96" type="text" name="working_concentration">¶Ãl
                 </td>
+
             </tr>
             <tr>
-                <td width="100px" height="40px">‰ΩìÁßØ</td>
-                <td width="100px" height="40px">
-                    <input width="96" type="text" name="volume">Œºl
-                </td>
-                <td width="100px" height="40px">ÊÑüÊüìÊó∂Èó¥</td>
-                <td width="100px" height="40px">
-                    <input width="96" type="text" name="infection_time">
-                </td>
-            </tr>
-            <tr>
-                <td width="100px" height="40px">ÊòØÂê¶ËææÂà∞È¢ÑÊúüÁõÆÊ†á</td>
+
+                <td width="100px" height="40px"> «∑Ò¥ÔµΩ‘§∆⁄ƒø±Í</td>
                 <td width="100px" height="40px">
                     <input type="radio" name="is_achieve_goal" value="1">1
                     <input type="radio" name="is_achieve_goal" value="2">2
@@ -227,7 +353,8 @@
                     <input type="radio" name="is_achieve_goal" value="4">4
                     <input type="radio" name="is_achieve_goal" value="5">5
                 </td>
-                <td width="100px" height="40px">ÊÄß‰ª∑ÊØî</td>
+
+                <td width="100px" height="40px">–‘º€±»</td>
                 <td width="100px" height="40px">
                     <input type="radio" name="cost_performance" value="1">1
                     <input type="radio" name="cost_performance" value="2">2
@@ -235,9 +362,11 @@
                     <input type="radio" name="cost_performance" value="4">4
                     <input type="radio" name="cost_performance" value="5">5
                 </td>
+
             </tr>
             <tr>
-                <td width="100px" height="40px">ÊÄª‰ΩìËØÑ‰ª∑</td>
+
+                <td width="100px" height="40px">◊‹ÃÂ∆¿º€</td>
                 <td width="100px" height="40px">
                     <input type="radio" name="overall_evaluation" value="1">1
                     <input type="radio" name="overall_evaluation" value="2">2
@@ -245,35 +374,115 @@
                     <input type="radio" name="overall_evaluation" value="4">4
                     <input type="radio" name="overall_evaluation" value="5">5
                 </td>
-                <td width="100px" height="40px">ËØÑËÆ∫</td>
+
+                <td width="100px" height="40px">∆¿¬€</td>
                 <td width="100px" height="40px">
                     <textarea name="comments"></textarea>
                 </td>
             </tr>
-
             <tr>
-                <td width="100px" height="40px">ÈôÑÂõæËØ¥Êòé</td>
+
+
+                <td width="100px" height="40px">∏ΩÕºÀµ√˜</td>
                 <td width="100px" height="40px">
                     <textarea name="drawings_show"></textarea>
                 </td>
-                <td width="100px" height="40px">Ë¥≠‰π∞ÈìæÊé•</td>
+
+                <td width="100px" height="40px">π∫¬Ú¡¥Ω”</td>
                 <td width="100px" height="40px">
                     <input type="text" name="URL">
                 </td>
+
             </tr>
             <tr>
-                <td width="100px" height="40px">ÂõæÁâá‰∏ä‰º†</td>
+                <td width="100px" height="40px">Õº∆¨…œ¥´</td>
                 <td width="100px" height="40px">
                     <input type="file" multiple="multiple" name="img">
                 </td>
-                <td width="100px" height="40px" colspan="2"><input type="submit" value="Êèê‰∫§"></td>
+
+                <td width="100px" height="40px" colspan="2"><input type="submit" value="Ã·Ωª"></td>
 
             </tr>
 
         </table>
 
+
     </form>
 </div>
+
+<script src="static/script/jquery-1.7.2.js"></script>
+
+
+<script type="text/javascript">
+
+    $("#brand").focusout(function () {
+        if ($("#brand").val() == "«Î—°‘Ò") {
+            alert("«Î—°‘Ò∆∑≈∆√˚≥∆")
+        }
+    });
+    //≤°∂æ¿‡–Õ–£—È
+    //≤˙∆∑√˚≥∆–£—È
+    //≤˙∆∑ªı∫≈–£—È
+    //≤˙∆∑≈˙¥Œ∫≈–£—È
+    //≤˙∆∑πÊ∏Ò–£—È
+    //≤˙∆∑º”∏ˆ–£—È
+    //—™«Â–Õ–£—È
+    //∆Ù∂Ø◊”–£—È
+    //‘≠º˛–£—È
+    //µŒ∂»–£—È
+    //”¶”√–£—È
+    //”¶”√∂‘œÛ∆∑œµ–£—È
+    //◊È÷Ø–£—È
+    //”¶”√∑Ω Ω–£—È
+    //ÃÂª˝–£—È
+    //∏–»æ∫Û±Ì¥Ô ±º‰–£—È
+    //∆¿∑÷–£—È1
+    //∆¿∑÷–£—È2
+    //∆¿∑÷–£—È3
+
+
+</script>
+
+<script type="text/javascript">
+
+    $("#searchproduct").click(function () {
+        var a = $("#brand").val();
+        var b = $("#goods_num").val();
+        var c = $("#batch_num").val();
+
+        $.ajax({
+            url: "http://localhost:8080/ssreagents/unique",
+            data: {"brand": a, "goods_num": b, "batch_num": c},
+            type: "POST",
+            success: function (data) {
+                if (data != null) {
+                    $("#product_name").val(data.product_name)
+                    $("#specifications").val(data.specifications)
+                    $("#price").val(data.price)
+                    $("#goods_time").val(data.goods_time)
+                    $("#period_validity").val(data.period_validity)
+                    $("#seroytpe").val(data.seroytpe)
+                    $("#promoter").val(data.promoter)
+                    $("#element").val(data.element)
+                    $("#fluorescent").val(data.fluorescent)
+                    $("#genetic_code").val(data.genetic_code)
+                    $("#gene_name").val(data.gene_name)
+                    $("#gene_size").val(data.gene_size)
+                    $("#resistance_gene").val(data.resistance_gene)
+                    $("#storage").val(data.storage)
+                    $("#qpcr").val(data.qpcr)
+                    $("#silver_stain").val(data.silver_stain)
+                    $("#literature_used").val(data.literature_used)
+                } else {
+                    alert("«ÎºÏ≤È «∑Ò ‰»Î¥ÌŒÛ£¨»Áπ˚’˝»∑ƒ«√¥ø‚÷–…–≤ª¥Ê‘⁄∏√≤˙∆∑")
+                }
+
+            },
+            dataType: "json"
+        });
+
+    })
+</script>
 
 </body>
 </html>

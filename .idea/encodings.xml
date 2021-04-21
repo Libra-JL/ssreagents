@@ -3,6 +3,8 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/src/main/webapp/pages/major/Proteins_peptides.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/pages/major/SuccessSubmit.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/pages/major/antibody.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/pages/major/kit.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/pages/major/top.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/pages/user/login_success.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/pages/user/regist.html" charset="GBK" />
