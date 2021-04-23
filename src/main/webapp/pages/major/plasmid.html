@@ -1,71 +1,81 @@
 <html>
 <head>
-    <title>è´¨ç²’</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="GBK">
+    <title>ÖÊÁ£</title>
+    <base href="http://localhost:8080/ssreagents/">
 </head>
 <body>
 <div class="plasmidform">
     <form action="vitus" method="post" enctype="multipart/form-data">
         <table border="1px solid #ccc" cellspacing="0" cellpadding="0">
             <tr>
-                <td width="150px" height="40px">å±žæ€§</td>
-                <td width="300px" height="40px">å†…å®¹</td>
-                <td width="150px" height="40px">å±žæ€§</td>
-                <td width="300px" height="40px">å†…å®¹</td>
+                <td width="150px" height="40px">ÊôÐÔ</td>
+                <td width="300px" height="40px">ÄÚÈÝ</td>
+                <td width="150px" height="40px">ÊôÐÔ</td>
+                <td width="300px" height="40px">ÄÚÈÝ</td>
 
             </tr>
             <tr>
-                <td width="100px" height="40px">å“ç‰Œ</td>
+                <td width="100px" height="40px">Æ·ÅÆ</td>
                 <td width="100px" height="40px">
                     <select name="brand">
-                        <option value="è¯·é€‰æ‹©">--è¯·é€‰æ‹©å“ç‰Œ--</option>
-                        <option value="ç»´çœŸ">ç»´çœŸ</option>
-                        <option value="ç»´çœŸ1">ç»´çœŸ1</option>
-                        <option value="ç»´çœŸ2">ç»´çœŸ2</option>
+                        <option value="ÇëÑ¡Ôñ">--ÇëÑ¡ÔñÆ·ÅÆ--</option>
+                        <option value="Î¬Õæ">Î¬Õæ</option>
+                        <option value="Î¬Õæ1">Î¬Õæ1</option>
+                        <option value="Î¬Õæ2">Î¬Õæ2</option>
                     </select>
                 </td>
-                <td width="100px" height="40px">äº§å“åç§°</td>
+                <td width="100px" height="40px">Àà±ð</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="kind">
+                </td>
+
+            </tr>
+            <tr>
+                <td width="100px" height="40px">²úÆ·Ãû³Æ</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="product_name">
                 </td>
-            </tr>
-            <tr>
-                <td width="100px" height="40px">è´§å·</td>
+                <td width="100px" height="40px">»õºÅ</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="goods_num">
                 </td>
-                <td width="100px" height="40px">æ‰¹æ¬¡å·</td>
+
+            </tr>
+            <tr>
+                <td width="100px" height="40px">Åú´ÎºÅ</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="batch_num">
                 </td>
+                <td width="100px" height="40px">¹æ¸ñ</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="specifications">¦Ìl
+                </td>
+
             </tr>
             <tr>
-                <td width="100px" height="40px">è§„æ ¼</td>
+                <td width="100px" height="40px">¼Û¸ñ</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="specifications">Î¼l
+                    <input width="96" type="text" name="price">Ôª
                 </td>
-                <td width="100px" height="40px">ä»·æ ¼</td>
+                <td width="100px" height="40px">»õÆÚ</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="price">å…ƒ
+                    <input width="96" type="text" name="goods_time">ÖÜ
                 </td>
-            </tr>
-            <tr>
-                <td width="100px" height="40px">è´§æœŸ</td>
-                <td width="100px" height="40px">
-                    <input width="96" type="text" name="goods_time">å‘¨
-                </td>
-                <td width="100px" height="40px">æœ‰æ•ˆæœŸ</td>
-                <td width="100px" height="40px">
-                    <input width="96" type="text" name="period_validity">å¹´
-                </td>
+
             </tr>
 
 
 
             <tr>
-                <td width="100px" height="40px">è¡€æ¸…åž‹</td>
+                <td width="100px" height="40px">ÓÐÐ§ÆÚ</td>
                 <td width="100px" height="40px">
-                    <select class="selectSeroytpe" name="seroytpe">
-                        <option value="--è¯·é€‰æ‹©è¡€æ¸…åž‹--">--è¯·é€‰æ‹©è¡€æ¸…åž‹--</option>
+                    <input width="96" type="text" name="period_validity">Äê
+                </td>
+                <td width="100px" height="40px">ÖÊÁ£ËÞÖ÷</td>
+                <td width="100px" height="40px">
+                    <select class="selectSeroytpe" name="host_range">
+                        <option value="--ÇëÑ¡ÔñÑªÇåÐÍ--">--ÇëÑ¡ÔñÑªÇåÐÍ--</option>
                         <option value="rAAV2/1">rAAV2/1</option>
                         <option value="rAAV2/2">rAAV2/2</option>
                         <option value="rAAV2/3">rAAV2/3</option>
@@ -87,10 +97,13 @@
                         <option value="3XMCK">AAV-Anc80L65</option>
                     </select>
                 </td>
-                <td width="100px" height="40px">å¯åŠ¨å­</td>
+
+            </tr>
+            <tr>
+                <td width="100px" height="40px">ÖÊÁ£ÓÃÍ¾</td>
                 <td width="100px" height="40px">
-                    <select name="promoter">
-                        <option value="rAAV2/1">--è¯·é€‰æ‹©å¯åŠ¨å­--</option>
+                    <select name="Plasmid purposes">
+                        <option value="rAAV2/1">--ÇëÑ¡ÔñÆô¶¯×Ó--</option>
                         <option value="UBC">UBC</option>
                         <option value="TBG">TBG</option>
                         <option value="SST">SST</option>
@@ -118,12 +131,10 @@
 
                     </select>
                 </td>
-            </tr>
-            <tr>
-                <td width="100px" height="40px">å…ƒä»¶</td>
+                <td width="100px" height="40px">Æ¬¶ÎÀà±ð</td>
                 <td width="100px" height="40px">
-                    <select name="element">
-                        <option value="--è¯·é€‰æ‹©å…ƒä»¶--">--è¯·é€‰æ‹©å…ƒä»¶--</option>
+                    <select name="Fragment category">
+                        <option value="--ÇëÑ¡ÔñÔª¼þ--">--ÇëÑ¡ÔñÔª¼þ--</option>
                         <option value="tTA">tTA</option>
                         <option value="RFP">RFP</option>
                         <option value="mCherry">mCherry</option>
@@ -137,10 +148,13 @@
                         <option value="Cre">Cre</option>
                     </select>
                 </td>
-                <td width="100px" height="40px">è§å…‰æ ‡ç­¾</td>
+
+            </tr>
+            <tr>
+                <td width="100px" height="40px">Æ¬¶ÎÎïÖÖ</td>
                 <td width="100px" height="40px">
-                    <select name="fluorescent">
-                        <option value="è¯·é€‰æ‹©è§å…‰æ ‡ç­¾">--è¯·é€‰æ‹©è§å…‰æ ‡ç­¾--</option>
+                    <select name="Fragment species">
+                        <option value="ÇëÑ¡ÔñÓ«¹â±êÇ©">--ÇëÑ¡ÔñÓ«¹â±êÇ©--</option>
                         <option value="GFP">GFP</option>
                         <option value="RFP">RFP</option>
                         <option value="mCherry">mCherry</option>
@@ -148,79 +162,123 @@
                         <option value="YFP">YFP</option>
                     </select>
                 </td>
+                <td width="100px" height="40px">Æô¶¯×Ó</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name=" promoter">
+                </td>
+
             </tr>
             <tr>
-                <td width="100px" height="40px">åŸºå› ç¼–å·</td>
+                <td width="100px" height="40px">¸´ÖÆ×Ó</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="genetic_code">
+                    <input width="96" type="text" name=" replicon">
                 </td>
-                <td width="100px" height="40px">åŸºå› åç§°</td>
+                <td width="100px" height="40px">ÖÊÁ£Í¼Æ×</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="gene_name">
+                    <input width="96" type="text" name="plasmid profile">
                 </td>
+
             </tr>
             <tr>
-                <td width="100px" height="40px">åŸºå› å¤§å°</td>
+                <td width="100px" height="40px">ÖÊÁ£ÐòÁÐ</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="gene_size">
+                    <input width="96" type="text" name="plasmid maintenance sequence">
                 </td>
-                <td width="100px" height="40px">æŠ—æ€§åŸºå› </td>
+                <td width="100px" height="40px">Ô­ºË¿¹ÐÔ</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="resistance_gene">
+                    <textarea name=" original nuclear resistance"></textarea>
                 </td>
+
             </tr>
             <tr>
-                <td width="100px" height="40px">å­˜æ”¾è¯´æ˜Ž</td>
+                <td width="100px" height="40px">É¸Ñ¡±ê¼Ç</td>
                 <td width="100px" height="40px">
-                    <textarea name="storage"></textarea>
+                    <input width="96" type="text" name="selection marker">
                 </td>
-                <td width="100px" height="40px">qPCRæ»´åº¦</td>
+                <td width="100px" height="40px">Ó«¹â±ê¼Ç</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="qpcr">
+                    <input width="96" type="text" name="fluorescent mark">
                 </td>
+
             </tr>
+
+
             <tr>
-                <td width="100px" height="40px">é“¶æŸ“æ»´åº¦</td>
+                <td width="100px" height="40px">¿ËÂ¡¾úÖê</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="silver_stain">
+                    <input width="96" type="text" name="regenerating strain">
                 </td>
-                <td width="100px" height="40px">å“ªäº›æ–‡çŒ®ä¸­ä½¿ç”¨è¿‡</td>
+                <td width="100px" height="40px">ÅàÑøÌõ¼þ</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="condition of culture">
+                </td>
+
+            </tr>
+
+            <tr>
+                <td width="100px" height="40px">5¡®²âÐòÒýÎï</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="5sequencing primer">
+                </td>
+                <td width="100px" height="40px">3¡®²âÐòÒýÎï</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="3sequencing primer">
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+                <td width="100px" height="40px">Ïà¹Ø²úÆ·</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="related products">
+                </td>
+
+                <td width="100px" height="40px">ÄÄÐ©ÎÄÏ×ÖÐÊ¹ÓÃ¹ý</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="literature_used">
                 </td>
             </tr>
+
             <tr>
-                <td width="100px" height="40px">åº”ç”¨</td>
+                <td colspan="4" bgcolor="#00bfff"><span>=============================================================================================</span>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td width="100px" height="40px">Ó¦ÓÃ</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="application">
                 </td>
-                <td width="100px" height="40px">åº”ç”¨å¯¹è±¡å“ç³»</td>
+                <td width="100px" height="40px">Ó¦ÓÃ¶ÔÏóÆ·Ïµ</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="application_object_atrain">
                 </td>
             </tr>
             <tr>
-                <td width="100px" height="40px">ç»„ç»‡</td>
+                <td width="100px" height="40px">×éÖ¯</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="bio_organization">
                 </td>
-                <td width="100px" height="40px">åº”ç”¨æ–¹å¼</td>
+                <td width="100px" height="40px">Ó¦ÓÃ·½Ê½</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="application_way">
                 </td>
             </tr>
             <tr>
-                <td width="100px" height="40px">ä½“ç§¯</td>
+                <td width="100px" height="40px">Ìå»ý</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="volume">Î¼l
+                    <input width="96" type="text" name="volume">¦Ìl
                 </td>
-                <td width="100px" height="40px">æ„ŸæŸ“æ—¶é—´</td>
+                <td width="100px" height="40px">¸ÐÈ¾Ê±¼ä</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="infection_time">
                 </td>
             </tr>
             <tr>
-                <td width="100px" height="40px">æ˜¯å¦è¾¾åˆ°é¢„æœŸç›®æ ‡</td>
+                <td width="100px" height="40px">ÊÇ·ñ´ïµ½Ô¤ÆÚÄ¿±ê</td>
                 <td width="100px" height="40px">
                     <input type="radio" name="is_achieve_goal" value="1">1
                     <input type="radio" name="is_achieve_goal" value="2">2
@@ -228,7 +286,7 @@
                     <input type="radio" name="is_achieve_goal" value="4">4
                     <input type="radio" name="is_achieve_goal" value="5">5
                 </td>
-                <td width="100px" height="40px">æ€§ä»·æ¯”</td>
+                <td width="100px" height="40px">ÐÔ¼Û±È</td>
                 <td width="100px" height="40px">
                     <input type="radio" name="cost_performance" value="1">1
                     <input type="radio" name="cost_performance" value="2">2
@@ -238,7 +296,7 @@
                 </td>
             </tr>
             <tr>
-                <td width="100px" height="40px">æ€»ä½“è¯„ä»·</td>
+                <td width="100px" height="40px">×ÜÌåÆÀ¼Û</td>
                 <td width="100px" height="40px">
                     <input type="radio" name="overall_evaluation" value="1">1
                     <input type="radio" name="overall_evaluation" value="2">2
@@ -246,28 +304,28 @@
                     <input type="radio" name="overall_evaluation" value="4">4
                     <input type="radio" name="overall_evaluation" value="5">5
                 </td>
-                <td width="100px" height="40px">è¯„è®º</td>
+                <td width="100px" height="40px">ÆÀÂÛ</td>
                 <td width="100px" height="40px">
                     <textarea name="comments"></textarea>
                 </td>
             </tr>
 
             <tr>
-                <td width="100px" height="40px">é™„å›¾è¯´æ˜Ž</td>
+                <td width="100px" height="40px">¸½Í¼ËµÃ÷</td>
                 <td width="100px" height="40px">
                     <textarea name="drawings_show"></textarea>
                 </td>
-                <td width="100px" height="40px">è´­ä¹°é“¾æŽ¥</td>
+                <td width="100px" height="40px">¹ºÂòÁ´½Ó</td>
                 <td width="100px" height="40px">
                     <input type="text" name="URL">
                 </td>
             </tr>
             <tr>
-                <td width="100px" height="40px">å›¾ç‰‡ä¸Šä¼ </td>
+                <td width="100px" height="40px">Í¼Æ¬ÉÏ´«</td>
                 <td width="100px" height="40px">
                     <input type="file" multiple="multiple" name="img">
                 </td>
-                <td width="100px" height="40px" colspan="2"><input type="submit" value="æäº¤"></td>
+                <td width="100px" height="40px" colspan="2"><input type="submit" value="Ìá½»"></td>
 
             </tr>
 

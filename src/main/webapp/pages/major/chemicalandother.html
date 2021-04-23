@@ -1,38 +1,39 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="GBK">
-    <title>化学品及其他</title>
+    <title>��ѧƷ������</title>
+    <base href="http://localhost:8080/ssreagents/">
 </head>
 <body>
 <div class="chemicalandother">
     <form action="vitus" method="post" enctype="multipart/form-data">
         <table border="1px solid #ccc" cellspacing="0" cellpadding="0">
             <tr>
-                <td width="150px" height="40px">属性</td>
-                <td width="300px" height="40px">内容</td>
-                <td width="150px" height="40px">属性</td>
-                <td width="300px" height="40px">内容</td>
+                <td width="150px" height="40px">����</td>
+                <td width="300px" height="40px">����</td>
+                <td width="150px" height="40px">����</td>
+                <td width="300px" height="40px">����</td>
 
             </tr>
 
             <tr>
-                <td width="100px" height="40px">类别</td>
+                <td width="100px" height="40px">���</td>
                 <td width="100px" height="40px">
                     <select name="kind">
-                        <option value="请选择">--请选择类别--</option>
-                        <option value="试剂盒">试剂盒</option>
-                        <option value="示踪剂">示踪剂</option>
-                        <option value="高分子材料">高分子材料</option>
+                        <option value="��ѡ��">--��ѡ�����--</option>
+                        <option value="�Լ���">�Լ���</option>
+                        <option value="ʾ�ټ�">ʾ�ټ�</option>
+                        <option value="�߷��Ӳ���">�߷��Ӳ���</option>
                     </select>
                 </td>
 
-                <td width="100px" height="40px">品牌</td>
+                <td width="100px" height="40px">Ʒ��</td>
                 <td width="100px" height="40px">
                     <select name="brand">
-                        <option value="请选择">--请选择品牌--</option>
-                        <option value="维真">维真</option>
-                        <option value="维真1">维真1</option>
-                        <option value="维真2">维真2</option>
+                        <option value="��ѡ��">--��ѡ��Ʒ��--</option>
+                        <option value="ά��">ά��</option>
+                        <option value="ά��1">ά��1</option>
+                        <option value="ά��2">ά��2</option>
                     </select>
                 </td>
 
@@ -40,99 +41,116 @@
 
             <tr>
 
-                <td width="100px" height="40px">产品名称</td>
+                <td width="100px" height="40px">��Ʒ����</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="product_name">
                 </td>
-                <td width="100px" height="40px">货号</td>
+                <td width="100px" height="40px">����</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="goods_num">
                 </td>
             </tr>
             <tr>
 
-                <td width="100px" height="40px">批次号</td>
+                <td width="100px" height="40px">���κ�</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="batch_num">
                 </td>
-                <td width="100px" height="40px">规格</td>
+                <td width="100px" height="40px">���</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="specifications">μl
-                </td>
-            </tr>
-            <tr>
-
-                <td width="100px" height="40px">价格</td>
-                <td width="100px" height="40px">
-                    <input width="96" type="text" name="price">元
-                </td>
-
-                <td width="100px" height="40px">种属</td>
-                <td width="100px" height="40px">
-                    <input width="96" type="text" name="species">
-                </td>
-            </tr>
-            <tr>
-                <td width="100px" height="40px">货期</td>
-                <td width="100px" height="40px">
-                    <input width="96" type="text" name="goods_time">周
-                </td>
-                <td width="100px" height="40px">有效期</td>
-                <td width="100px" height="40px">
-                    <input width="96" type="text" name="period_validity">年
+                    <input width="96" type="text" name="specifications">��l
                 </td>
             </tr>
 
 
             <tr>
-                <td width="100px" height="40px">相关产品</td>
+
+                <td width="100px" height="40px">������̬</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="physical form">Ԫ
+                </td>
+
+                <td width="100px" height="40px">���� </td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name=" purity">
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td width="100px" height="40px">�۸�</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="price">Ԫ
+                </td>
+
+                <td width="100px" height="40px">����ʽ</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="molecular formula">
+                </td>
+            </tr>
+            <tr>
+                <td width="100px" height="40px">CAS</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="CAS">
+                </td>
+
+
+                <td width="100px" height="40px">�洢�¶�</td>
+                <td width="100px" height="40px">
+                    <textarea name="storage temperature"></textarea>
+                </td>
+
+
+            </tr>
+
+
+            <tr>
+
+                <td width="100px" height="40px">ת���¶�</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="transition temperature">��
+                </td>
+
+                <td width="100px" height="40px">mol wt</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="mol wt">��
+                </td>
+
+
+            </tr>
+
+
+            <tr>
+                <td width="100px" height="40px">feed ratio </td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="feed ratio ">��
+                </td>
+
+                <td width="100px" height="40px">��ز�Ʒ</td>
                 <td width="100px" height="40px">
                     <textarea name="related_products" id="related_products"></textarea>
                 </td>
-                <td width="100px" height="40px">样品类型</td>
-                <td width="100px" height="40px">
-                    <select name="promoter">
-                        <option value="rAAV2/1">--请选择启动子--</option>
-                        <option value="UBC">ELISA kit</option>
-                        <option value="TBG">Cell culture supernatant</option>
-                        <option value="SST">Serum</option>
-                        <option value="RPE65">Plasma</option>
-                        <option value="PGK">Hep Plasma</option>
-                        <option value="NSE">EDTA Plasma</option>
-                        <option value="MECP2">Cit plasma</option>
-                        <option value="MCK">other</option>
 
-                    </select>
-                </td>
+
             </tr>
-
-
             <tr>
-                <td width="100px" height="40px">存放说明</td>
+                <td width="100px" height="40px">����ʱ��</td>
                 <td width="100px" height="40px">
-                    <textarea name="storage"></textarea>
+                    <input width="96" type="text" name="degradation time">
                 </td>
-                <td width="100px" height="40px">灵敏度</td>
+                <td width="100px" height="40px">����</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="sensitivity">
+                    <input width="96" type="text" name="goods_time">
                 </td>
             </tr>
             <tr>
-                <td width="100px" height="40px">范围</td>
+                <td width="100px" height="40px">��Ч��</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="range">
+                    <input width="96" type="text" name="period_validity">
                 </td>
-                <td width="100px" height="40px">回收率</td>
-                <td width="100px" height="40px">
-                    <input width="96" type="text" name="recovery">
-                </td>
-            </tr>
-            <tr>
-                <td width="100px" height="40px">精确度</td>
-                <td width="100px" height="40px">
-                    <input width="96" type="text" name="accuracy">
-                </td>
-                <td width="100px" height="40px">哪些文献中使用过</td>
+                <td width="100px" height="40px">��Щ������ʹ�ù�</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="literature_used" id="literature_used">
                 </td>
@@ -146,29 +164,28 @@
 
             <tr>
 
-                <td width="100px" height="40px">应用</td>
+                <td width="100px" height="40px">Ӧ��</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="application">
                 </td>
-                <td width="100px" height="40px">检测类型</td>
+                <td width="100px" height="40px">Ӧ�ö���Ʒϵ</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="Detection_type">
+                    <input width="96" type="text" name="application_object_atrain">
                 </td>
-
 
             </tr>
             <tr>
-                <td width="100px" height="40px">检测方法</td>
+                <td width="100px" height="40px">��֯</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="Detection_way">
+                    <input width="96" type="text" name="bio_organization">
                 </td>
-                <td width="100px" height="40px">检测时间</td>
+                <td width="100px" height="40px">���ʱ��</td>
                 <td width="100px" height="40px">
                     <input width="96" type="text" name="Detection_time">
                 </td>
             </tr>
             <tr>
-                <td width="100px" height="40px">是否达到预期目标</td>
+                <td width="100px" height="40px">�Ƿ�ﵽԤ��Ŀ��</td>
                 <td width="100px" height="40px">
                     <input type="radio" name="is_achieve_goal" value="1">1
                     <input type="radio" name="is_achieve_goal" value="2">2
@@ -176,7 +193,7 @@
                     <input type="radio" name="is_achieve_goal" value="4">4
                     <input type="radio" name="is_achieve_goal" value="5">5
                 </td>
-                <td width="100px" height="40px">性价比</td>
+                <td width="100px" height="40px">�Լ۱�</td>
                 <td width="100px" height="40px">
                     <input type="radio" name="cost_performance" value="1">1
                     <input type="radio" name="cost_performance" value="2">2
@@ -186,7 +203,7 @@
                 </td>
             </tr>
             <tr>
-                <td width="100px" height="40px">总体评价</td>
+                <td width="100px" height="40px">��������</td>
                 <td width="100px" height="40px">
                     <input type="radio" name="overall_evaluation" value="1">1
                     <input type="radio" name="overall_evaluation" value="2">2
@@ -194,29 +211,29 @@
                     <input type="radio" name="overall_evaluation" value="4">4
                     <input type="radio" name="overall_evaluation" value="5">5
                 </td>
-                <td width="100px" height="40px">评论</td>
+                <td width="100px" height="40px">����</td>
                 <td width="100px" height="40px">
                     <textarea name="comments"></textarea>
                 </td>
             </tr>
 
             <tr>
-                <td width="100px" height="40px">附图说明</td>
+                <td width="100px" height="40px">��ͼ˵��</td>
                 <td width="100px" height="40px">
                     <textarea name="drawings_show"></textarea>
                 </td>
-                <td width="100px" height="40px">购买链接</td>
+                <td width="100px" height="40px">��������</td>
                 <td width="100px" height="40px">
                     <input type="text" name="URL">
                 </td>
             </tr>
             <tr>
-                <td width="100px" height="40px">图片上传</td>
+                <td width="100px" height="40px">ͼƬ�ϴ�</td>
                 <td width="100px" height="40px">
                     <input type="file" multiple="multiple" name="img">
                 </td>
 
-                <td width="100px" height="40px" colspan="2"><input type="submit" value="提交"></td>
+                <td width="100px" height="40px" colspan="2"><input type="submit" value="�ύ"></td>
 
             </tr>
 
