@@ -1,0 +1,563 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="GBK">
+    <title>抗体</title>
+    <base href="http://localhost:8080/ssreagents/">
+
+</head>
+<body>
+<div class="antibodyform">
+    <form action="vitus" method="post" enctype="multipart/form-data">
+        <table border="1px solid #ccc" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="150px" height="40px">属性</td>
+                <td width="300px" height="40px">内容</td>
+                <td width="150px" height="40px">属性</td>
+                <td width="300px" height="40px">内容</td>
+
+            </tr>
+            <tr>
+                <td width="100px" height="40px">品牌</td>
+                <td width="100px" height="40px">
+                    <select id="brand" name="brand">
+                        <option value="请选择">--请选择品牌--</option>
+                        <option value="abcam">abcam</option>
+                        <option value="invitrogen">invitrogen</option>
+                        <option value="abcam2">abcam2</option>
+                        <option value="1">1</option>
+                        <option value="其他">其他</option>
+                    </select>
+                    <span></span>
+                </td>
+
+
+                <td width="100px" height="40px">产品类别</td>
+                <td width="100px" height="40px">
+                    <select id="kind" name="kind">
+                        <option value="请选择">--请选择产品类别--</option>
+                        <option value="一抗">一抗</option>
+                        <option value="二抗">二抗</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+
+                <td width="100px" height="40px">产品名称</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="product_name" id="product_name">
+                </td>
+                <td width="100px" height="40px">货号</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="goods_num" id="goods_num">
+                </td>
+
+            </tr>
+            <tr>
+                <td width="100px" height="40px">批次号</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="batch_num" id="batch_num">
+                    <button type="button" id="searchproduct">查询</button>
+                </td>
+                <td width="100px" height="40px">规格</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="specifications" id="specifications">μl
+                </td>
+
+            </tr>
+            <tr>
+                <td width="100px" height="40px">价格</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="price" id="price">元
+                </td>
+                <td width="100px" height="40px">货期</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="goods_time" id="goods_time">mg/ml
+                </td>
+            </tr>
+
+
+            <tr>
+                <td width="100px" height="40px">有效期</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="period_validity" id="period_validity">年
+                </td>
+
+                <td width="100px" height="40px">蛋白靶标</td>
+
+                <td width="100px" height="40px">
+                    <!--           后期修改按数字及字母小写大写排序         -->
+                    <select name="Protein_targets" id="Protein_targets">
+                        <option value="--请选择蛋白靶标--">--请选择蛋白靶标--</option>
+                        <option value="tgf beta">tgf&nbsp;&nbsp;beta</option>
+                        <option value="P2y12">P2y12</option>
+                        <option value="TNF-alpha">TNF-alpha</option>
+                        <option value="Tie2">Tie2</option>
+                        <option value="Neurofilament">Neurofilament</option>
+                        <option value="neun">neun</option>
+                        <option value="Mmp2">Mmp2</option>
+                        <option value="IL-1 beta">IL-1&nbsp;&nbsp;beta</option>
+                        <option value="Iba1">Iba1</option>
+                        <option value="gapdh">gapdh</option>
+                        <option value="chicken">chicken</option>
+                        <option value="goat">goat</option>
+                        <option value="mouse">mouse</option>
+                        <option value="rabbit">rabbit</option>
+                        <option value="5ht">5ht</option>
+                        <option value="Cd31">Cd31</option>
+                        <option value="Cd68">Cd68</option>
+                        <option value="MBP">MBP</option>
+                        <option value="Ang2">Ang2</option>
+                        <option value="Bax">Bax</option>
+                        <option value="Bcl2">Bcl2</option>
+                        <option value="Ccl2">Ccl2</option>
+                        <option value="fibronectin">fibronectin</option>
+                    </select>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td width="100px" height="40px">纯度</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="purity" id="purity">周
+                </td>
+                <td width="100px" height="40px">宿主</td>
+                <td width="100px" height="40px">
+                    <select class="selectParasitifer" name="parasitifer" id="parasitifer">
+                        <option value="--请选择宿主--">--请选择宿主--</option>
+                        <option value="Rabbit">Rabbit</option>
+                        <option value="Mouse">Mouse</option>
+                        <option value="Rat">Rat</option>
+                        <option value="Goat">Goat</option>
+                        <option value="Sheep">Sheep</option>
+                        <option value="Armenian ">Armenian</option>
+                        <option value="hamster ">hamster</option>
+                        <option value="Chicken">Chicken</option>
+                        <option value="Guinea_pig">Guinea_pig</option>
+                        <option value="Syrian_hamste">Syrian_hamste</option>
+                        <option value="Human">Human</option>
+                        <option value="Mixed">Mixed</option>
+                        <option value="Donkey ">Donkey</option>
+                        <option value="Bovine ">Bovine</option>
+                        <option value="Horse">Horse</option>
+                        <option value="other">other</option>
+                    </select>
+                </td>
+            </tr>
+
+
+            <tr>
+
+                <td width="100px" height="40px">用途</td>
+                <td width="100px" height="40px">
+                    <select name="useapplication" id="useapplication">
+                        <option value="--请选择用途--">--请选择用途--</option>
+                        <option value="ICC/IF">ICC/IF</option>
+                        <option value="WB">WB</option>
+                        <option value="Dot">Dot</option>
+                        <option value="ICC">ICC</option>
+                        <option value="Tie2">EIA</option>
+                        <option value="Neurofilament">ELISA</option>
+                        <option value="neun">ELISpot</option>
+                        <option value="Mmp2">EM</option>
+                        <option value="IL-1 beta">EMSA</option>
+                        <option value="Iba1">Flow</option>
+                        <option value="gapdh">Cyt(Intra)</option>
+                        <option value="chicken">FM</option>
+                        <option value="goat">FPIA</option>
+                        <option value="mouse">FRET</option>
+                        <option value="rabbit">FuncS</option>
+                        <option value="5ht">GSA</option>
+                        <option value="Cd31">H</option>
+                        <option value="Cd68">High throughput screening</option>
+                        <option value="MBP">HPLC</option>
+                        <option value="Ang2">IA</option>
+                        <option value="Bax">ID</option>
+                        <option value="Bcl2">Ie</option>
+                        <option value="Ccl2">I-ELISA</option>
+                        <option value="Ccl2">IHC</option>
+                        <option value="Ccl2">IHC–Wmt</option>
+                        <option value="Ccl2">IHC(Methanol fixed)</option>
+                        <option value="Ccl2">IHC(PFA fixed)</option>
+                        <option value="Ccl2">IHC-FoFr</option>
+                        <option value="Ccl2">IHC-Fr</option>
+                        <option value="Ccl2">IHC-FrFl</option>
+                        <option value="Ccl2">IHC-G</option>
+                        <option value="Ccl2">IHC-Glut</option>
+                        <option value="Ccl2">IHC-M</option>
+                        <option value="Ccl2">IM Purification</option>
+                        <option value="Ccl2">Real Time PCR</option>
+                        <option value="Ccl2">RIA</option>
+                        <option value="Ccl2">RID</option>
+                        <option value="Ccl2">RIP</option>
+                        <option value="Ccl2">RT-PCR</option>
+                        <option value="Ccl2">SB</option>
+                        <option value="Ccl2">sELISA</option>
+                        <option value="Ccl2">Size Exclusion Chromatography</option>
+                        <option value="Ccl2">TLC</option>
+
+                    </select>
+                </td>
+
+
+                <td width="100px" height="40px">片段类型</td>
+                <td width="100px" height="40px">
+                    <select name="Fragment_type" id="Fragment_type">
+                        <option value="请选择欧联物">--请选择欧联物--</option>
+                        <option value="GFP">Agarose</option>
+                        <option value="RFP">Alexa Fluor? 405</option>
+                        <option value="RFP">Alexa Fluor? 555</option>
+                        <option value="RFP">Alexa Fluor? 568</option>
+                        <option value="RFP">Alexa Fluor? 594</option>
+                        <option value="RFP">Alexa Fluor? 680</option>
+                        <option value="RFP">Alexa Fluor? 700</option>
+                        <option value="RFP">Alexa Fluor? 750</option>
+                        <option value="RFP">Alexa Fluor? 790</option>
+                        <option value="RFP">TRITC</option>
+                        <option value="RFP">violetFluor? 450</option>
+
+                    </select>
+                </td>
+
+
+            </tr>
+
+
+            <tr>
+
+                <td width="100px" height="40px">启动子</td>
+                <td width="100px" height="40px">
+                    <select name="promoter" id="promoter">
+                        <option value="rAAV2/1">--请选择启动子--</option>
+                        <option value="UBC">UBC</option>
+                        <option value="TBG">TBG</option>
+                        <option value="TBG">SYN</option>
+                        <option value="SST">SST</option>
+                        <option value="RPE65">RPE65</option>
+                        <option value="PGK">PGK</option>
+                        <option value="NSE">NSE</option>
+                        <option value="MECP2">MECP2</option>
+                        <option value="MCK">MCK</option>
+                        <option value="MBP">MBP</option>
+                        <option value="INSULIN">INSULIN</option>
+                        <option value="HCRAopE-hAAT">HCRAopE-hAAT</option>
+                        <option value="GFAP104">GFAP104</option>
+                        <option value="GFAP">GFAP</option>
+                        <option value="EFFS">EFFS</option>
+                        <option value="EF1a">EF1a</option>
+                        <option value="cTNT">cTNT</option>
+                        <option value="CK1.3">CK1.3</option>
+                        <option value="CK0.4">CK0.4</option>
+                        <option value="c-fos">c-fos</option>
+                        <option value="CamKIIa">CamKIIa</option>
+                        <option value="CAG">CAG</option>
+                        <option value="aMHC">aMHC</option>
+                        <option value="ALB">ALB</option>
+                        <option value="3XMCK">3XMCK</option>
+
+                    </select>
+                </td>
+
+                <td width="100px" height="40px">复制子</td>
+                <td width="100px" height="40px">
+                    <select name="replicor" id="replicor">
+                        <option value="rAAV2/1">--请选择启动子--</option>
+                        <option value="UBC">UBC</option>
+                        <option value="TBG">TBG</option>
+                        <option value="TBG">SYN</option>
+                        <option value="SST">SST</option>
+                        <option value="RPE65">RPE65</option>
+                        <option value="PGK">PGK</option>
+                        <option value="NSE">NSE</option>
+                        <option value="MECP2">MECP2</option>
+                        <option value="MCK">MCK</option>
+                        <option value="MBP">MBP</option>
+                        <option value="INSULIN">INSULIN</option>
+                        <option value="HCRAopE-hAAT">HCRAopE-hAAT</option>
+                        <option value="GFAP104">GFAP104</option>
+                        <option value="GFAP">GFAP</option>
+                        <option value="EFFS">EFFS</option>
+                        <option value="EF1a">EF1a</option>
+                        <option value="cTNT">cTNT</option>
+                        <option value="CK1.3">CK1.3</option>
+                        <option value="CK0.4">CK0.4</option>
+                        <option value="c-fos">c-fos</option>
+                        <option value="CamKIIa">CamKIIa</option>
+                        <option value="CAG">CAG</option>
+                        <option value="aMHC">aMHC</option>
+                        <option value="ALB">ALB</option>
+                        <option value="3XMCK">3XMCK</option>
+
+                    </select>
+                </td>
+
+            </tr>
+            <tr>
+                <td width="100px" height="40px">质粒图谱</td>
+                <td width="100px" height="40px">
+                    <input type="file" multiple="multiple" name="plasmid_profile">
+                </td>
+
+
+                <td width="100px" height="40px">质粒序列</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="plasmid_maintenance_sequencecomment"
+                           id="plasmid_maintenance_sequencecomment">
+                </td>
+
+
+            </tr>
+
+            <tr>
+
+                <td width="100px" height="40px">原核抗性</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="ori_nuclear_resistancecomment"
+                           id="ori_nuclear_resistancecomment">
+                </td>
+                <td width="100px" height="40px">筛选标记</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="selection_marker" id="selection_marker">
+                </td>
+
+            </tr>
+            <tr>
+
+                <td width="100px" height="40px">荧光标记</td>
+                <td width="100px" height="40px">
+                    <textarea name="fluorescent_mark" id="fluorescent_mark"></textarea>
+                </td>
+                <td width="100px" height="40px">克隆菌株</td>
+                <td width="100px" height="40px">
+                    <textarea name="regenerating_strain" id="regenerating_strain"></textarea>
+                </td>
+
+
+            </tr>
+
+            <tr>
+
+
+                <td width="100px" height="40px">培养条件</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="condition_culture" id="condition_culture">
+                </td>
+                <td width="100px" height="40px">5’测序引物</td>
+                <td width="100px" height="40px">
+                    <textarea name="sequencing_primer5" id="sequencing_primer5"></textarea>
+                </td>
+
+
+            </tr>
+            <tr>
+
+
+                <td width="100px" height="40px">3’测序引物</td>
+                <td width="100px" height="40px">
+                    <textarea name="sequencing_primer3" id="sequencing_primer3"></textarea>
+                </td>
+
+                <td width="100px" height="40px">那些文献使用过</td>
+                <td width="100px" height="40px">
+                    <textarea name="literature_used" id="literature_used"></textarea>
+                </td>
+
+
+            </tr>
+
+            <tr>
+
+                <td width="100px" height="40px">相关产品</td>
+                <td width="100px" height="40px">
+                    <textarea name="related_products" id="related_products"></textarea>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td colspan="4" bgcolor="#00bfff"><span>=============================================================================================</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="100px" height="40px">应用</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="application">
+                </td>
+                <td width="100px" height="40px">应用对象品系</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="application_object_atrain">
+                </td>
+            </tr>
+            <tr>
+                <td width="100px" height="40px">组织</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="bio_organization">
+                </td>
+                <td width="100px" height="40px">工作浓度</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="working_concentration">μl
+                </td>
+
+            </tr>
+            <tr>
+                <td width="100px" height="40px">应用方式</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="application_way">
+                </td>
+                <td width="100px" height="40px">注射体积</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="volume">μl
+                </td>
+
+            </tr>
+            <tr>
+                <td width="100px" height="40px">感染时间</td>
+                <td width="100px" height="40px">
+                    <input width="96" type="text" name="infection_time">
+                </td>
+
+                <td width="100px" height="40px">是否达到预期目标</td>
+                <td width="100px" height="40px">
+                    <input type="radio" name="is_achieve_goal" value="1">1
+                    <input type="radio" name="is_achieve_goal" value="2">2
+                    <input type="radio" name="is_achieve_goal" value="3">3
+                    <input type="radio" name="is_achieve_goal" value="4">4
+                    <input type="radio" name="is_achieve_goal" value="5">5
+                </td>
+
+
+            </tr>
+            <tr>
+                <td width="100px" height="40px">性价比</td>
+                <td width="100px" height="40px">
+                    <input type="radio" name="cost_performance" value="1">1
+                    <input type="radio" name="cost_performance" value="2">2
+                    <input type="radio" name="cost_performance" value="3">3
+                    <input type="radio" name="cost_performance" value="4">4
+                    <input type="radio" name="cost_performance" value="5">5
+                </td>
+
+                <td width="100px" height="40px">总体评价</td>
+                <td width="100px" height="40px">
+                    <input type="radio" name="overall_evaluation" value="1">1
+                    <input type="radio" name="overall_evaluation" value="2">2
+                    <input type="radio" name="overall_evaluation" value="3">3
+                    <input type="radio" name="overall_evaluation" value="4">4
+                    <input type="radio" name="overall_evaluation" value="5">5
+                </td>
+
+
+            </tr>
+            <tr>
+                <td width="100px" height="40px">评论</td>
+                <td width="100px" height="40px">
+                    <textarea name="comments"></textarea>
+                </td>
+
+                <td width="100px" height="40px">附图说明</td>
+                <td width="100px" height="40px">
+                    <textarea name="drawings_show"></textarea>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td width="100px" height="40px">购买链接</td>
+                <td width="100px" height="40px">
+                    <input type="text" name="URL">
+                </td>
+                <td width="100px" height="40px">图片上传</td>
+                <td width="100px" height="40px">
+                    <input type="file" multiple="multiple" name="img">
+                </td>
+
+            </tr>
+            <tr>
+                <td width="100px" height="40px" colspan="4"><input type="submit" value="提交"></td>
+
+            </tr>
+
+        </table>
+
+
+    </form>
+</div>
+
+<script src="static/script/jquery-1.7.2.js"></script>
+
+
+<script type="text/javascript">
+
+    $("#brand").focusout(function () {
+        if ($("#brand").val() == "请选择") {
+            alert("请选择品牌名称")
+        }
+    });
+    //病毒类型校验
+    //产品名称校验
+    //产品货号校验
+    //产品批次号校验
+    //产品规格校验
+    //产品加个校验
+    //血清型校验
+    //启动子校验
+    //原件校验
+    //滴度校验
+    //应用校验
+    //应用对象品系校验
+    //组织校验
+    //应用方式校验
+    //体积校验
+    //感染后表达时间校验
+    //评分校验1
+    //评分校验2
+    //评分校验3
+
+
+</script>
+
+<script type="text/javascript">
+
+    $("#searchproduct").click(function () {
+        var a = $("#brand").val();
+        var b = $("#goods_num").val();
+        var c = $("#batch_num").val();
+
+        $.ajax({
+            url: "http://localhost:8080/ssreagents/unique",
+            data: {"brand": a, "goods_num": b, "batch_num": c},
+            type: "POST",
+            success: function (data) {
+                if (data != null) {
+                    $("#product_name").val(data.product_name)
+                    $("#specifications").val(data.specifications)
+                    $("#price").val(data.price)
+                    $("#goods_time").val(data.goods_time)
+                    $("#period_validity").val(data.period_validity)
+                    $("#seroytpe").val(data.seroytpe)
+                    $("#promoter").val(data.promoter)
+                    $("#element").val(data.element)
+                    $("#fluorescent").val(data.fluorescent)
+                    $("#genetic_code").val(data.genetic_code)
+                    $("#gene_name").val(data.gene_name)
+                    $("#gene_size").val(data.gene_size)
+                    $("#resistance_gene").val(data.resistance_gene)
+                    $("#storage").val(data.storage)
+                    $("#qpcr").val(data.qpcr)
+                    $("#silver_stain").val(data.silver_stain)
+                    $("#literature_used").val(data.literature_used)
+                } else {
+                    alert("请检查是否输入错误，如果正确那么库中尚不存在该产品")
+                }
+
+            },
+            dataType: "json"
+        });
+
+    })
+</script>
+
+</body>
+</html>
