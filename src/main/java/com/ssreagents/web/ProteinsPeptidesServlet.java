@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet(name = "ProteinsPeptidesServlet")
+
 public class ProteinsPeptidesServlet extends HttpServlet {
 
     private ProteinsPeptidesService pps = new ProteinsPeptidesServiceImpl();

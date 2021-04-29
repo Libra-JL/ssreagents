@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="plasmidform">
-    <form action="vitus" method="post" enctype="multipart/form-data">
+    <form action="Plamid" method="post" enctype="multipart/form-data">
         <table border="1px solid #ccc" cellspacing="0" cellpadding="0">
             <tr>
                 <td width="150px" height="40px">属性</td>
@@ -102,7 +102,7 @@
             <tr>
                 <td width="100px" height="40px">质粒用途</td>
                 <td width="100px" height="40px">
-                    <select name="Plasmid purposes">
+                    <select name="Plasmid_purposes">
                         <option value="rAAV2/1">--请选择启动子--</option>
                         <option value="UBC">UBC</option>
                         <option value="TBG">TBG</option>
@@ -133,7 +133,7 @@
                 </td>
                 <td width="100px" height="40px">片段类别</td>
                 <td width="100px" height="40px">
-                    <select name="Fragment category">
+                    <select name="Fragment_category">
                         <option value="--请选择元件--">--请选择元件--</option>
                         <option value="tTA">tTA</option>
                         <option value="RFP">RFP</option>
@@ -153,7 +153,7 @@
             <tr>
                 <td width="100px" height="40px">片段物种</td>
                 <td width="100px" height="40px">
-                    <select name="Fragment species">
+                    <select name="Fragment_species">
                         <option value="请选择荧光标签">--请选择荧光标签--</option>
                         <option value="GFP">GFP</option>
                         <option value="RFP">RFP</option>
@@ -164,40 +164,40 @@
                 </td>
                 <td width="100px" height="40px">启动子</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name=" promoter">
+                    <input width="96" type="text" name="promoter">
                 </td>
 
             </tr>
             <tr>
                 <td width="100px" height="40px">复制子</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name=" replicon">
+                    <input width="96" type="text" name="replicor">
                 </td>
                 <td width="100px" height="40px">质粒图谱</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="plasmid profile">
+                    <input width="96" type="text" name="plasmid_profile">
                 </td>
 
             </tr>
             <tr>
                 <td width="100px" height="40px">质粒序列</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="plasmid maintenance sequence">
+                    <input width="96" type="text" name="plasmid_maintenance_sequencecomment">
                 </td>
                 <td width="100px" height="40px">原核抗性</td>
                 <td width="100px" height="40px">
-                    <textarea name=" original nuclear resistance"></textarea>
+                    <textarea name="ori_nuclear_resistancecomment"></textarea>
                 </td>
 
             </tr>
             <tr>
                 <td width="100px" height="40px">筛选标记</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="selection marker">
+                    <input width="96" type="text" name="selection_marker">
                 </td>
                 <td width="100px" height="40px">荧光标记</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="fluorescent mark">
+                    <input width="96" type="text" name="fluorescent_mark">
                 </td>
 
             </tr>
@@ -206,11 +206,11 @@
             <tr>
                 <td width="100px" height="40px">克隆菌株</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="regenerating strain">
+                    <input width="96" type="text" name="regenerating_strain">
                 </td>
                 <td width="100px" height="40px">培养条件</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="condition of culture">
+                    <input width="96" type="text" name="condition_culture">
                 </td>
 
             </tr>
@@ -218,11 +218,11 @@
             <tr>
                 <td width="100px" height="40px">5‘测序引物</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="5sequencing primer">
+                    <input width="96" type="text" name="sequencing_primer5">
                 </td>
                 <td width="100px" height="40px">3‘测序引物</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="3sequencing primer">
+                    <input width="96" type="text" name="sequencing_primer3">
                 </td>
 
             </tr>
@@ -232,7 +232,7 @@
             <tr>
                 <td width="100px" height="40px">相关产品</td>
                 <td width="100px" height="40px">
-                    <input width="96" type="text" name="related products">
+                    <input width="96" type="text" name="related_products">
                 </td>
 
                 <td width="100px" height="40px">哪些文献中使用过</td>

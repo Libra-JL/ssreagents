@@ -20,13 +20,13 @@ public class PlamidDaoImpl extends BaseDao implements PlamidDao {
     public int savePlamidBasic(Plamid plamid) {
         String sql = "insert into t_plasmid_basic(uid,kind,brand,product_name,goods_num" +
                 ",batch_num,specifications,price,goods_time,period_validity" +
-                ",Protein_targets,purity,parasitifer,useapplication,Fragment_type" +
+                ",parasitifer,useapplication,Fragment_type,fragment_species" +
                 ",promoter,replicor,plasmid_profile,plasmid_maintenance_sequencecomment,ori_nuclear_resistancecomment" +
                 ",selection_marker,fluorescent_mark,regenerating_strain,condition_culture,sequencing_primer5" +
                 ",sequencing_primer3,literature_used,related_products)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         return upadate(sql,plamid.getUid(),plamid.getKind(),plamid.getBrand(),plamid.getProductName(),plamid.getGoodsNum(),
                 plamid.getBatchNum(),plamid.getSpecifications(),plamid.getPrice(),plamid.getGoodsNum(),plamid.getPeriodValidity(),
-                plamid.getProteinTargets(),plamid.getPurity(),plamid.getParasitifer(),plamid.getUseapplication(),plamid.getFragmentType(),
+                plamid.getParasitifer(),plamid.getUseapplication(),plamid.getFragmentType(),plamid.getFragmentSpecies(),
                 plamid.getPromoter(),plamid.getReplicor(),plamid.getPlasmidProfile(),plamid.getPlasmidMaintenanceSequencecomment(),plamid.getOriNuclearResistancecomment(),
                 plamid.getSelectionMarker(),plamid.getFluorescentMark(),plamid.getRegeneratingStrain(),plamid.getConditionCulture(),plamid.getSequencingPrimer5(),
                 plamid.getSequencingPrimer3(),plamid.getLiteratureUsed(),plamid.getRelatedProducts());

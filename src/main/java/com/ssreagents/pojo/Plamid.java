@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 import java.util.Objects;
 
 public class Plamid {
-    private long id;
+    private String id;
     private String uid;
     private String kind;
     private String brand;
@@ -15,8 +15,6 @@ public class Plamid {
     private String price;
     private String goodsTime;
     private String periodValidity;
-    private String proteinTargets;
-    private String purity;
     private String parasitifer;
     private String useapplication;
     private String fragmentType;
@@ -33,7 +31,7 @@ public class Plamid {
     private String sequencingPrimer3;
     private String literatureUsed;
     private String relatedProducts;
-
+    private String fragmentSpecies;
 
     private String application;
     private String applicationObjectAtrain;
@@ -55,59 +53,6 @@ public class Plamid {
     private java.sql.Timestamp createdate;
     private String recorderemail;
 
-    @Override
-    public String toString() {
-        return "Plamid{" +
-                "id=" + id +
-                ", uid='" + uid + '\'' +
-                ", kind='" + kind + '\'' +
-                ", brand='" + brand + '\'' +
-                ", productName='" + productName + '\'' +
-                ", goodsNum='" + goodsNum + '\'' +
-                ", batchNum='" + batchNum + '\'' +
-                ", specifications='" + specifications + '\'' +
-                ", price='" + price + '\'' +
-                ", goodsTime='" + goodsTime + '\'' +
-                ", periodValidity='" + periodValidity + '\'' +
-                ", proteinTargets='" + proteinTargets + '\'' +
-                ", purity='" + purity + '\'' +
-                ", parasitifer='" + parasitifer + '\'' +
-                ", useapplication='" + useapplication + '\'' +
-                ", fragmentType='" + fragmentType + '\'' +
-                ", promoter='" + promoter + '\'' +
-                ", replicor='" + replicor + '\'' +
-                ", plasmidProfile='" + plasmidProfile + '\'' +
-                ", plasmidMaintenanceSequencecomment='" + plasmidMaintenanceSequencecomment + '\'' +
-                ", oriNuclearResistancecomment='" + oriNuclearResistancecomment + '\'' +
-                ", selectionMarker='" + selectionMarker + '\'' +
-                ", fluorescentMark='" + fluorescentMark + '\'' +
-                ", regeneratingStrain='" + regeneratingStrain + '\'' +
-                ", conditionCulture='" + conditionCulture + '\'' +
-                ", sequencingPrimer5='" + sequencingPrimer5 + '\'' +
-                ", sequencingPrimer3='" + sequencingPrimer3 + '\'' +
-                ", literatureUsed='" + literatureUsed + '\'' +
-                ", relatedProducts='" + relatedProducts + '\'' +
-                ", application='" + application + '\'' +
-                ", applicationObjectAtrain='" + applicationObjectAtrain + '\'' +
-                ", bioOrganization='" + bioOrganization + '\'' +
-                ", applicationWay='" + applicationWay + '\'' +
-                ", volume='" + volume + '\'' +
-                ", infectionTime='" + infectionTime + '\'' +
-                ", isAchieveGoal='" + isAchieveGoal + '\'' +
-                ", costPerformance='" + costPerformance + '\'' +
-                ", overallEvaluation='" + overallEvaluation + '\'' +
-                ", comments='" + comments + '\'' +
-                ", drawingsShow='" + drawingsShow + '\'' +
-                ", url='" + url + '\'' +
-                ", img1='" + img1 + '\'' +
-                ", img2='" + img2 + '\'' +
-                ", img3='" + img3 + '\'' +
-                ", img4='" + img4 + '\'' +
-                ", img5='" + img5 + '\'' +
-                ", createdate=" + createdate +
-                ", recorderemail='" + recorderemail + '\'' +
-                '}';
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -118,7 +63,7 @@ public class Plamid {
             return false;
         }
         Plamid plamid = (Plamid) o;
-        return id == plamid.id &&
+        return Objects.equals(id, plamid.id) &&
                 Objects.equals(uid, plamid.uid) &&
                 Objects.equals(kind, plamid.kind) &&
                 Objects.equals(brand, plamid.brand) &&
@@ -129,8 +74,6 @@ public class Plamid {
                 Objects.equals(price, plamid.price) &&
                 Objects.equals(goodsTime, plamid.goodsTime) &&
                 Objects.equals(periodValidity, plamid.periodValidity) &&
-                Objects.equals(proteinTargets, plamid.proteinTargets) &&
-                Objects.equals(purity, plamid.purity) &&
                 Objects.equals(parasitifer, plamid.parasitifer) &&
                 Objects.equals(useapplication, plamid.useapplication) &&
                 Objects.equals(fragmentType, plamid.fragmentType) &&
@@ -147,6 +90,7 @@ public class Plamid {
                 Objects.equals(sequencingPrimer3, plamid.sequencingPrimer3) &&
                 Objects.equals(literatureUsed, plamid.literatureUsed) &&
                 Objects.equals(relatedProducts, plamid.relatedProducts) &&
+                Objects.equals(fragmentSpecies, plamid.fragmentSpecies) &&
                 Objects.equals(application, plamid.application) &&
                 Objects.equals(applicationObjectAtrain, plamid.applicationObjectAtrain) &&
                 Objects.equals(bioOrganization, plamid.bioOrganization) &&
@@ -170,14 +114,67 @@ public class Plamid {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, uid, kind, brand, productName, goodsNum, batchNum, specifications, price, goodsTime, periodValidity, proteinTargets, purity, parasitifer, useapplication, fragmentType, promoter, replicor, plasmidProfile, plasmidMaintenanceSequencecomment, oriNuclearResistancecomment, selectionMarker, fluorescentMark, regeneratingStrain, conditionCulture, sequencingPrimer5, sequencingPrimer3, literatureUsed, relatedProducts, application, applicationObjectAtrain, bioOrganization, applicationWay, volume, infectionTime, isAchieveGoal, costPerformance, overallEvaluation, comments, drawingsShow, url, img1, img2, img3, img4, img5, createdate, recorderemail);
+        return Objects.hash(id, uid, kind, brand, productName, goodsNum, batchNum, specifications, price, goodsTime, periodValidity, parasitifer, useapplication, fragmentType, promoter, replicor, plasmidProfile, plasmidMaintenanceSequencecomment, oriNuclearResistancecomment, selectionMarker, fluorescentMark, regeneratingStrain, conditionCulture, sequencingPrimer5, sequencingPrimer3, literatureUsed, relatedProducts, fragmentSpecies, application, applicationObjectAtrain, bioOrganization, applicationWay, volume, infectionTime, isAchieveGoal, costPerformance, overallEvaluation, comments, drawingsShow, url, img1, img2, img3, img4, img5, createdate, recorderemail);
     }
 
-    public long getId() {
+    @Override
+    public String toString() {
+        return "Plamid{" +
+                "id='" + id + '\'' +
+                ", uid='" + uid + '\'' +
+                ", kind='" + kind + '\'' +
+                ", brand='" + brand + '\'' +
+                ", productName='" + productName + '\'' +
+                ", goodsNum='" + goodsNum + '\'' +
+                ", batchNum='" + batchNum + '\'' +
+                ", specifications='" + specifications + '\'' +
+                ", price='" + price + '\'' +
+                ", goodsTime='" + goodsTime + '\'' +
+                ", periodValidity='" + periodValidity + '\'' +
+                ", parasitifer='" + parasitifer + '\'' +
+                ", useapplication='" + useapplication + '\'' +
+                ", fragmentType='" + fragmentType + '\'' +
+                ", promoter='" + promoter + '\'' +
+                ", replicor='" + replicor + '\'' +
+                ", plasmidProfile='" + plasmidProfile + '\'' +
+                ", plasmidMaintenanceSequencecomment='" + plasmidMaintenanceSequencecomment + '\'' +
+                ", oriNuclearResistancecomment='" + oriNuclearResistancecomment + '\'' +
+                ", selectionMarker='" + selectionMarker + '\'' +
+                ", fluorescentMark='" + fluorescentMark + '\'' +
+                ", regeneratingStrain='" + regeneratingStrain + '\'' +
+                ", conditionCulture='" + conditionCulture + '\'' +
+                ", sequencingPrimer5='" + sequencingPrimer5 + '\'' +
+                ", sequencingPrimer3='" + sequencingPrimer3 + '\'' +
+                ", literatureUsed='" + literatureUsed + '\'' +
+                ", relatedProducts='" + relatedProducts + '\'' +
+                ", fragmentSpecies='" + fragmentSpecies + '\'' +
+                ", application='" + application + '\'' +
+                ", applicationObjectAtrain='" + applicationObjectAtrain + '\'' +
+                ", bioOrganization='" + bioOrganization + '\'' +
+                ", applicationWay='" + applicationWay + '\'' +
+                ", volume='" + volume + '\'' +
+                ", infectionTime='" + infectionTime + '\'' +
+                ", isAchieveGoal='" + isAchieveGoal + '\'' +
+                ", costPerformance='" + costPerformance + '\'' +
+                ", overallEvaluation='" + overallEvaluation + '\'' +
+                ", comments='" + comments + '\'' +
+                ", drawingsShow='" + drawingsShow + '\'' +
+                ", url='" + url + '\'' +
+                ", img1='" + img1 + '\'' +
+                ", img2='" + img2 + '\'' +
+                ", img3='" + img3 + '\'' +
+                ", img4='" + img4 + '\'' +
+                ", img5='" + img5 + '\'' +
+                ", createdate=" + createdate +
+                ", recorderemail='" + recorderemail + '\'' +
+                '}';
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -259,22 +256,6 @@ public class Plamid {
 
     public void setPeriodValidity(String periodValidity) {
         this.periodValidity = periodValidity;
-    }
-
-    public String getProteinTargets() {
-        return proteinTargets;
-    }
-
-    public void setProteinTargets(String proteinTargets) {
-        this.proteinTargets = proteinTargets;
-    }
-
-    public String getPurity() {
-        return purity;
-    }
-
-    public void setPurity(String purity) {
-        this.purity = purity;
     }
 
     public String getParasitifer() {
@@ -403,6 +384,14 @@ public class Plamid {
 
     public void setRelatedProducts(String relatedProducts) {
         this.relatedProducts = relatedProducts;
+    }
+
+    public String getFragmentSpecies() {
+        return fragmentSpecies;
+    }
+
+    public void setFragmentSpecies(String fragmentSpecies) {
+        this.fragmentSpecies = fragmentSpecies;
     }
 
     public String getApplication() {
@@ -558,11 +547,9 @@ public class Plamid {
     }
 
     public Plamid() {
-
     }
 
-    public Plamid(long id, String uid, String kind, String brand, String productName, String goodsNum, String batchNum, String specifications, String price, String goodsTime, String periodValidity, String proteinTargets, String purity, String parasitifer, String useapplication, String fragmentType, String promoter, String replicor, String plasmidProfile, String plasmidMaintenanceSequencecomment, String oriNuclearResistancecomment, String selectionMarker, String fluorescentMark, String regeneratingStrain, String conditionCulture, String sequencingPrimer5, String sequencingPrimer3, String literatureUsed, String relatedProducts, String application, String applicationObjectAtrain, String bioOrganization, String applicationWay, String volume, String infectionTime, String isAchieveGoal, String costPerformance, String overallEvaluation, String comments, String drawingsShow, String url, String img1, String img2, String img3, String img4, String img5, Timestamp createdate, String recorderemail) {
-
+    public Plamid(String id, String uid, String kind, String brand, String productName, String goodsNum, String batchNum, String specifications, String price, String goodsTime, String periodValidity, String parasitifer, String useapplication, String fragmentType, String promoter, String replicor, String plasmidProfile, String plasmidMaintenanceSequencecomment, String oriNuclearResistancecomment, String selectionMarker, String fluorescentMark, String regeneratingStrain, String conditionCulture, String sequencingPrimer5, String sequencingPrimer3, String literatureUsed, String relatedProducts, String fragmentSpecies, String application, String applicationObjectAtrain, String bioOrganization, String applicationWay, String volume, String infectionTime, String isAchieveGoal, String costPerformance, String overallEvaluation, String comments, String drawingsShow, String url, String img1, String img2, String img3, String img4, String img5, Timestamp createdate, String recorderemail) {
         this.id = id;
         this.uid = uid;
         this.kind = kind;
@@ -574,8 +561,6 @@ public class Plamid {
         this.price = price;
         this.goodsTime = goodsTime;
         this.periodValidity = periodValidity;
-        this.proteinTargets = proteinTargets;
-        this.purity = purity;
         this.parasitifer = parasitifer;
         this.useapplication = useapplication;
         this.fragmentType = fragmentType;
@@ -592,6 +577,7 @@ public class Plamid {
         this.sequencingPrimer3 = sequencingPrimer3;
         this.literatureUsed = literatureUsed;
         this.relatedProducts = relatedProducts;
+        this.fragmentSpecies = fragmentSpecies;
         this.application = application;
         this.applicationObjectAtrain = applicationObjectAtrain;
         this.bioOrganization = bioOrganization;

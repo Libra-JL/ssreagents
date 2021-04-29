@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet(name = "KitServlet")
+
 public class KitServlet extends HttpServlet {
 
     private KitService ks = new KitServiceImpl();

@@ -8,39 +8,96 @@
         <welcome-file>/pages/user/login.html</welcome-file>
     </welcome-file-list>
 
+
     <servlet>
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>com.ssreagents.web.RegistServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>VitusServlet</servlet-name>
-        <servlet-class>com.ssreagents.web.VitusServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>com.ssreagents.web.LoginServlet</servlet-class>
-    </servlet>
-<!--    <servlet>-->
-<!--        <servlet-name>UniqueAjaxServlet</servlet-name>-->
-<!--        <servlet-class>com.ssreagents.web.UniqueAjaxServlet</servlet-class>-->
-<!--    </servlet>-->
-
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>UniqueAjaxServlet</servlet-name>-->
-<!--        <url-pattern>/unique</url-pattern>-->
-<!--    </servlet-mapping>-->
-
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>VitusServlet</servlet-name>
-        <url-pattern>/vitus</url-pattern>
-    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.ssreagents.web.LoginServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>VitusServlet</servlet-name>
+        <servlet-class>com.ssreagents.web.VitusServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VitusServlet</servlet-name>
+        <url-pattern>/vitus</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AntibodyServlet</servlet-name>
+        <servlet-class>com.ssreagents.web.AntibodyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AntibodyServlet</servlet-name>
+        <url-pattern>/antibody</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>PlamidServlet</servlet-name>
+        <servlet-class>com.ssreagents.web.PlamidServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PlamidServlet</servlet-name>
+        <url-pattern>/Plamid</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>KitServlet</servlet-name>
+        <servlet-class>com.ssreagents.web.KitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>KitServlet</servlet-name>
+        <url-pattern>/Kit</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ProteinsPeptidesServlet</servlet-name>
+        <servlet-class>com.ssreagents.web.ProteinsPeptidesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProteinsPeptidesServlet</servlet-name>
+        <url-pattern>/ProteinsPeptides</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ChemicalandotherServlet</servlet-name>
+        <servlet-class>com.ssreagents.web.ChemicalandotherServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChemicalandotherServlet</servlet-name>
+        <url-pattern>/chemicalandother</url-pattern>
+    </servlet-mapping>
+
+
+    <!--    <servlet>-->
+    <!--        <servlet-name>UniqueAjaxServlet</servlet-name>-->
+    <!--        <servlet-class>com.ssreagents.web.UniqueAjaxServlet</servlet-class>-->
+    <!--    </servlet>-->
+
+    <!--    <servlet-mapping>-->
+    <!--        <servlet-name>UniqueAjaxServlet</servlet-name>-->
+    <!--        <url-pattern>/unique</url-pattern>-->
+    <!--    </servlet-mapping>-->
+
 
 </web-app>

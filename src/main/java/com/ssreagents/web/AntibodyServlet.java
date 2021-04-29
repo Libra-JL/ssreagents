@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet(name = "AntibodyServlet")
+
 public class AntibodyServlet extends HttpServlet {
 
     private AntibodyService as = new AntibodyServiceImpl();

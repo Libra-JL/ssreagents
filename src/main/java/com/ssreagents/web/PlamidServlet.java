@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet(name = "PlamidServlet")
+
 public class PlamidServlet extends HttpServlet {
     private PlamidService ps = new PlamidServiceImpl();
 
@@ -82,12 +82,12 @@ public class PlamidServlet extends HttpServlet {
         plamid.setBatchNum(kv.get("batch_num"));
         plamid.setSpecifications(kv.get("specifications"));
         plamid.setPrice(kv.get("price"));
+        plamid.setGoodsTime(kv.get("goods_time"));
         plamid.setPeriodValidity(kv.get("period_validity"));
-        plamid.setProteinTargets(kv.get("Protein_targets"));
-        plamid.setPurity(kv.get("purity"));
-        plamid.setParasitifer(kv.get("parasitifer"));
-        plamid.setUseapplication(kv.get("useapplication"));
-        plamid.setFragmentType(kv.get("useapplication"));
+        plamid.setParasitifer(kv.get("host_range"));
+        plamid.setUseapplication(kv.get("Plasmid_purposes"));
+        plamid.setFragmentType(kv.get("Fragment_category"));
+        plamid.setFragmentSpecies(kv.get("Fragment_species"));
         plamid.setPromoter(kv.get("promoter"));
         plamid.setReplicor(kv.get("replicor"));
         plamid.setPlasmidProfile(kv.get("plasmid_profile"));
@@ -95,27 +95,27 @@ public class PlamidServlet extends HttpServlet {
         plamid.setOriNuclearResistancecomment(kv.get("ori_nuclear_resistancecomment"));
         plamid.setSelectionMarker(kv.get("selection_marker"));
         plamid.setFluorescentMark(kv.get("fluorescent_mark"));
+        plamid.setRegeneratingStrain(kv.get("regenerating_strain"));
         plamid.setConditionCulture(kv.get("condition_culture"));
         plamid.setSequencingPrimer5(kv.get("sequencing_primer5"));
         plamid.setSequencingPrimer3(kv.get("sequencing_primer3"));
         plamid.setLiteratureUsed(kv.get("literature_used"));
         plamid.setRelatedProducts(kv.get("related_products"));
-        plamid.setGoodsTime(kv.get("goods_time"));
-
-
 
         plamid.setApplication(kv.get("application"));
         plamid.setApplicationObjectAtrain(kv.get("application_object_atrain"));
         plamid.setBioOrganization(kv.get("bio_organization"));
-
-        plamid.(kv.get("working_concentration"));
-
+        plamid.setApplicationWay(kv.get("application_way"));
+        plamid.setVolume(kv.get("volume"));
+        plamid.setInfectionTime(kv.get("infection_time"));
         plamid.setIsAchieveGoal(kv.get("is_achieve_goal"));
         plamid.setCostPerformance(kv.get("cost_performance"));
         plamid.setOverallEvaluation(kv.get("overall_evaluation"));
         plamid.setComments(kv.get("comments"));
         plamid.setDrawingsShow(kv.get("drawings_show"));
         plamid.setUrl(kv.get("URL"));
+
+
         if (kv.get("img1") == null) {
             plamid.setImg1(null);
         } else {
@@ -156,7 +156,6 @@ public class PlamidServlet extends HttpServlet {
 
 
         System.out.println(plamid.toString());
-
 
 
         ps.savePlamidBasic(plamid);
